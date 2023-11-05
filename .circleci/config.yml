@@ -151,46 +151,7 @@ workflows:
   build_and_deploy:
     jobs:
       - build
-      - linting:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
-      - prettier:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
-      - unit-test:
-          requires:
-            - linting
-            - prettier
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
-      - publich-docker-image-docker-hub:
-          requires:
-            - unit-test
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
       - terraform-validate:
-          requires:
-            - publich-docker-image-docker-hub
           filters:
             branches:
               only:
