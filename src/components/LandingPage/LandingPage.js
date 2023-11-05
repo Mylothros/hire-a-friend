@@ -92,12 +92,14 @@ const LandingPage = () => {
                 <button className="arrow-button" onClick={handleSignupClick}>Sign Up</button>
             </div>
             <div className="section area-4">
-                <p>Connect with us</p>
-                <div className="icons">
-                    <a href="" className="fa fa-instagram" target="_blank"></a>&nbsp;&nbsp;
-                    <a href="https://www.linkedin.com/in/hire-afriend-b5088a293/" className="fa fa-linkedin" target="_blank"></a>    
-                </div> 
-                <p><a href="mailto:hireafriend@gmail.com">hireafriend@gmail.com</a></p>
+                <div className="test">
+                    <p>Connect with us</p>
+                    <div className="icons">
+                        <a href="" className="fa fa-instagram" target="_blank"></a>&nbsp;&nbsp;
+                        <a href="https://www.linkedin.com/in/hire-afriend-b5088a293/" className="fa fa-linkedin" target="_blank"></a>    
+                    </div> 
+                    <p><a href="mailto:hireafriend@gmail.com">hireafriend@gmail.com</a></p>
+                </div>
             </div>
         </div>
     );

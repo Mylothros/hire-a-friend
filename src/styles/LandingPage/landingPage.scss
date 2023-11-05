@@ -1,18 +1,15 @@
 .landing-page {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 0.1fr;
-   
 }
   
 .section {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 140px;
 }
 
 .area-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
 
     .top-left-box {
         width: 130px;
@@ -49,14 +46,14 @@
     }
     
     .grid-1-button {
-        justify-content: center;
+        justify-content: left;
         display: flex;
     }
 
     button {
         font-size: 20px;
         border-radius: 20px;
-        width: 60%;
+        width: 50%;
         display: flex;
         justify-content: center;
         background: #BE3455;
@@ -81,13 +78,11 @@
 
 
     .grid-item-image {  
-        display: flex;
-        margin-left: 300px;
-        height: 600px;
-
+        margin-left: 100px;
+        height: auto;
+        
         img {
             height: 70%;
-            margin-top: 100px;
         }
     }
 
@@ -109,9 +104,8 @@
 
 
 .area-2 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    width: 100%;
+    display: flex;
+    justify-content: center;
     
     h2 {
         font-size: 30px;
@@ -141,9 +135,7 @@
         display: flex;
         
         img {
-            max-width: 100%;
             height: 70%;
-            margin-top: 100px;
         }
     }
     @media screen and (max-width: 1300px) {
@@ -227,7 +219,7 @@
     button {
         font-size: 20px;
         border-radius: 20px;
-        width: 30%;
+        width: 20%;
         background: #BE3455;
         color: white;
         padding: 15px 20px;
@@ -262,12 +254,16 @@
 
 // area 4
 .area-4 {
-    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
     justify-content: center;
+    .test {
+        width: 1300px;
+        background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 70px;
+    }
     p {
         font-weight: bold;
         color: #454545;
