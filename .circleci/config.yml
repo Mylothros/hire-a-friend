@@ -2,6 +2,10 @@ orbs:
   slack: circleci/slack@4.1
 version: '2.1'
 executors:
+  app-executor:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
   terraform-executor:
     docker:
       - image: hashicorp/terraform:1.3.9
