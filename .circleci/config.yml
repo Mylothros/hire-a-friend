@@ -97,7 +97,7 @@ jobs:
             cd artifacts/infrastructure/
             terraform workspace select ${CIRCLE_BRANCH}
             terraform apply --auto-approve
-            terraform output odeon_app_bucket_name > ../odeon_bucket_name.txt
+            terraform output hire_a_friend_app_bucket_name > ../hire_a_friend_bucket_name.txt
             terraform output couldfront_distribution_id > ../couldfront_distribution_id.txt
       - persist_to_workspace:
           root: ./
@@ -116,7 +116,7 @@ jobs:
       - run:
           name: Deploy to aws s3
           command: |
-            AWS_BUCKET_NAME=$(cat artifacts/odeon_bucket_name.txt | sed 's/\"//g')
+            AWS_BUCKET_NAME=$(cat artifacts/hire_a_friend_bucket_name.txt | sed 's/\"//g')
             echo $AWS_BUCKET_NAME
             if [ "${CIRCLE_BRANCH}" == "master" ]
             then
