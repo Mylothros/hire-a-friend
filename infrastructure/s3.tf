@@ -5,11 +5,6 @@ resource "aws_s3_bucket" "hire_a_friend_app_s3_bucket" {
   tags = local.common_tags
 }
 
-resource "aws_s3_bucket_acl" "hire_a_friend_app_bucket_acl" {
-  bucket = aws_s3_bucket.hire_a_friend_app_s3_bucket.id
-  acl    = "private"
-}
-
 resource "aws_s3_bucket_public_access_block" "public_block" {
   bucket = aws_s3_bucket.hire_a_friend_app_s3_bucket.id
 
