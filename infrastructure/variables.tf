@@ -1,9 +1,9 @@
 variable "prefix" {
-  default = "hire_a_friend_myapp"
+  default = "hire-a-friend-myapp"
 }
 
 variable "project" {
-  default = "hire_a_friend"
+  default = "hire-a-friend"
 }
 
 variable "custom_error_response" {
