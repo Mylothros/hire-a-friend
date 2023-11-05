@@ -1,4 +1,4 @@
-output "hire_a_friend_bucket_name" {
+output "hire_a_friend_app_bucket_name" {
   value = aws_s3_bucket.hire_a_friend_s3_bucket.id
 }
 
