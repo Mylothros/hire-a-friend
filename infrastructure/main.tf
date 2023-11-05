@@ -4,8 +4,8 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket  = "hire_a_friend-tf-state"
-    key     = "hire_a_friend.tfstate"
+    bucket  = "hire-a-friend-tf-state"
+    key     = "hire-a-friend.tfstate"
     region  = "us-east-1"
     encrypt = true
   }
