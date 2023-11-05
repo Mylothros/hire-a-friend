@@ -6,11 +6,36 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #FFFFFF;
-  background: linear-gradient(to top right, #F4E41E, #BE3455);
+  background: content-box radial-gradient(#F4E41E, #BE3455); 
+  background-size: cover;
   overflow-x: hidden
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.fade-enter {
+  display:none;
+  opacity: 0;
+  transform: translate(0, 25px);
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 250ms ease-out, transform 300ms ease;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: opacity 250ms ease-out, transform 300ms ease;
 }

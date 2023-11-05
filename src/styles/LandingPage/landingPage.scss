@@ -1,42 +1,41 @@
 // Base styling for the entire landing page
 .landing-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 100px;
     margin-left: 80px;
     margin-right: 80px;
 }
   
-  .section {
+.section {
     text-align: center;
+    height: 542px;
     padding: 20px;
-  }
+}
 
-// Area 1
 .area-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;   
-    margin-top: 50px;
 
     .top-left-box {
+        width: 130px;
         background: #BE3455;
         color: #F4E41E;
         border-radius: 10px;
         padding-top: 5px;
         padding-bottom: 5px;
         font-weight: 900;
-        width: 15%;
         margin-bottom: 60px;
+        cursor: pointer;
     }
 
     h2 {
-        display: flex;
         font-size: 30px;
         text-align: left;
 
         .highlighted-word-grid-1 {
+            display: contents;
             color: #454545;
             padding: 0 5px;
         }
@@ -70,26 +69,39 @@
         border: none;
         margin-top: 30px;
         cursor: pointer;
+
+        &:hover {
+            color: white;
+            opacity: 0.5;
+          }
     }
 
     .arrow-button {
         background-image: url("../../assets/arrow.png");
-        background-size: 25px; /* Set the size of the arrow image */
+        background-size: 25px;
         background-repeat: no-repeat;
         background-position: bottom 9px right 50px;        
     }
 
 
-    .image {  
+    .grid-item-image {  
+        display: flex;
+        margin-left: 100px;
 
         img {
             max-width: 100%;
-            height: auto;
+            height: 70%;
+            margin-top: 100px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .arrow-button {
+            background-image: none;  
         }
     }
 }
 
-// Area 2
 .area-2 {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -109,7 +121,7 @@
         li {
             color: #454545;
             font-weight: 900;
-            text-indent: 0.5em; // Adjust the negative value to control the space
+            text-indent: 0.5em;
         }
         li::marker {
           content: '\2022';
@@ -119,11 +131,14 @@
         }
       }
 
-    .image {
+    .grid-item-image {  
+        display: flex;
+        margin-left: 50px;
         
         img {
             max-width: 100%;
-            height: auto;
+            height: 70%;
+            margin-top: 100px;
         }
     }
 }
@@ -187,14 +202,9 @@
             img {
                 position: absolute;
                 right: 5px;
-                bottom: 0;
+                bottom: 5px;
                 width: 130px;
                 height: 130px;
-                border: 2px solid transparent;
-                transition: border-color 0.3s;
-                &:hover {
-                    border-color: #BE3455;;
-                }
             }
         }
     }
@@ -209,6 +219,11 @@
         border: none;
         margin-top: 30px;
         cursor: pointer;
+        
+        &:hover {
+            color: white;
+            opacity: 0.5;
+          }
     }
 
     .arrow-button {
@@ -216,5 +231,16 @@
         background-size: 25px; /* Set the size of the arrow image */
         background-repeat: no-repeat;
         background-position: bottom 13px right 90px;        
+    }
+
+    @media screen and (max-width: 1200px) {
+        .image-container {
+            display: grid;
+            justify-content: center;
+            grid-gap: 10px;
+      }
+      .arrow-button {
+            background-image: none;  
+        }
     }
 }

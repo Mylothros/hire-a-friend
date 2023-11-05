@@ -14,21 +14,25 @@ const LandingPage = () => {
     const handleSignupClick = () => {
         navigate('/signup');
     };
+    
+    const handleHomePage = () => {
+        navigate('/');
+    };
 
     return (
         <div className="landing-page">
             <div className="section area-1">
-            <div className="grid-item">
-                <div className="top-left-box">hire @ friend</div>
-                <h2>Where friendship MEETS <div className="highlighted-word-grid-1">&nbsp;OPPORTUNITY</div></h2>
-                <p>Join as <div className="highlighted-word">a professional or as client</div>. Earn money, find new connections and experience. </p>
-                <div className="grid-1-button">
-                    <button className="arrow-button" onClick={handleSignupClick}>Sign up for free</button>
+                <div className="grid-item">
+                    <div className="top-left-box" onClick={handleHomePage}>hire @ friend</div>
+                    <h2>Where friendship MEETS <div className="highlighted-word-grid-1">&nbsp;OPPORTUNITY</div></h2>
+                    <p>Join as <div className="highlighted-word">a professional or as client</div>. Earn money, find new connections and experience. </p>
+                    <div className="grid-1-button">
+                        <button className="arrow-button" onClick={handleSignupClick}>Sign up for free</button>
+                    </div>
                 </div>
-            </div>
-            <div className="grid-item image">
-                <img src={grid_1_image} alt="Landing Image" />
-            </div>
+                <div className="grid-item-image">
+                    <img src={grid_1_image} alt="Landing Image" />
+                </div>
             </div>
 
             <div className="section area-2">
@@ -42,11 +46,13 @@ const LandingPage = () => {
                             Possibility to use your skills and make money doing what you love</li>
                         <li>
                             Possibility to hire professional and get services of different categories
+                        </li>
+                        <li>
                             Platform  for  learning and experiencing new things with a trustworthy professionals
                         </li>
                     </ul>
                 </div>
-                <div className="grid-item image">
+                <div className="grid-item-image">
                     <img src={grid_2_image} alt="Landing Image" />
                 </div>
             </div>
