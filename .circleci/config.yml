@@ -45,6 +45,21 @@ aliases:
         echo "Build successful"
 jobs:
   build:
+  executor: app-executor
+    steps:
+      - checkout
+      - *show-current-branch-name
+      - *restore-cache
+      - *install-dependencies
+      - *save-cache
+      - run:
+          name: Copy Infrastructure Folder
+          command: cp -r infrastructure artifacts/infrastructure
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - artifacts
+
   terraform-validate:
     executor: terraform-executor
     steps:
@@ -152,6 +167,8 @@ workflows:
     jobs:
       - build
       - terraform-validate:
+          requires:
+            - build
           filters:
             branches:
               only:
