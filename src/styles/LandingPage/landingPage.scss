@@ -1,0 +1,220 @@
+// Base styling for the entire landing page
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+  
+  .section {
+    text-align: center;
+    padding: 20px;
+  }
+
+// Area 1
+.area-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;   
+    margin-top: 50px;
+
+    .top-left-box {
+        background: #BE3455;
+        color: #F4E41E;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: 900;
+        width: 15%;
+        margin-bottom: 60px;
+    }
+
+    h2 {
+        display: flex;
+        font-size: 30px;
+        text-align: left;
+
+        .highlighted-word-grid-1 {
+            color: #454545;
+            padding: 0 5px;
+        }
+    }
+
+    p {
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        .highlighted-word {
+            display: inline;
+            color: #454545;
+            font-weight: bold;
+        }
+    }
+    
+    .grid-1-button {
+        justify-content: center;
+        display: flex;
+    }
+
+    button {
+        font-size: 20px;
+        border-radius: 20px;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        background: #BE3455;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    .arrow-button {
+        background-image: url("../../assets/arrow.png");
+        background-size: 25px; /* Set the size of the arrow image */
+        background-repeat: no-repeat;
+        background-position: bottom 9px right 50px;        
+    }
+
+
+    .image {  
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Area 2
+.area-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    
+    h2 {
+        font-size: 30px;
+        & .highlighted-word-grid-2 {
+            color: #BE3455;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        text-align: left;
+        font-size: 20px;
+        li {
+            color: #454545;
+            font-weight: 900;
+            text-indent: 0.5em; // Adjust the negative value to control the space
+        }
+        li::marker {
+          content: '\2022';
+          font-size: 50px;
+          color: #BE3455;
+          
+        }
+      }
+
+    .image {
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Area 3
+.area-3 {
+    width: 100%;
+
+    h2 {
+        font-size: 30px;
+        & .highlighted-word-grid-3 {
+            display: inline;
+            color: #BE3455;
+        }
+    }
+
+    h3 {
+        color: #454545;
+    }
+
+    p {
+        text-align: left;
+        margin-left: 12px
+    }
+
+    .highlighted-word-grid-3-step {
+        font-size: 12px;
+        color: #696969;
+    }
+
+    .highlighted-word-grid-3-1 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #BE3455;
+    }
+
+    .highlighted-word-grid-3-2 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #454545;
+    }
+
+    .highlighted-word-grid-3-3 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #696969;
+    }
+    
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+
+        .image-container--image {
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            height: 150px;
+            width: 300px;
+            cursor: pointer;
+
+            img {
+                position: absolute;
+                right: 5px;
+                bottom: 0;
+                width: 130px;
+                height: 130px;
+                border: 2px solid transparent;
+                transition: border-color 0.3s;
+                &:hover {
+                    border-color: #BE3455;;
+                }
+            }
+        }
+    }
+
+    button {
+        font-size: 20px;
+        border-radius: 20px;
+        width: 30%;
+        background: #BE3455;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    .arrow-button {
+        background-image: url("../../assets/arrow.png");
+        background-size: 25px; /* Set the size of the arrow image */
+        background-repeat: no-repeat;
+        background-position: bottom 13px right 90px;        
+    }
+}
