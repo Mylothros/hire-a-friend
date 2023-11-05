@@ -25,7 +25,7 @@ const Article = () => {
             </div>
         </div>
         <div className="sign-up-grid-item-image">
-            <img src={sign_up_success} alt="Landing Image" />
+            <img style={{ height: '400px' }} src={sign_up_success} alt="Landing Image" />
         </div>
       </div>
   );

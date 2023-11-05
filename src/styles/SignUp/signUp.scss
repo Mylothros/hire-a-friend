@@ -1,9 +1,7 @@
 .sign-up-area-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 100%;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
     
     .sign-up-top-left-box {
         width: 130px;
@@ -32,7 +30,7 @@
     }
     
     .sign-up-grid-1-button {
-        justify-content: center;
+        justify-content: left;
         display: flex;
     }
 
@@ -64,13 +62,12 @@
 
     .sign-up-grid-item-image {  
         display: flex;
-        margin-left: 200px;
-        margin-top: 50px;
-
-        img {  
-            height: 50%;
+        justify-content: right;
+        img {
+            height: 70%;
         }
     }
+
     @media screen and (max-width: 1300px) {
         .sign-up-grid-item-image {  
             display: flex;
