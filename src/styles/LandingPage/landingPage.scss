@@ -1,11 +1,11 @@
 .landing-page {
     display: grid;
-    
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
 }
 
 .section {
     text-align: center;
-    margin-top: 12%;
+    margin-top: 10%;
 }
 
 .area-1 {
@@ -248,13 +248,14 @@
 .area-4 {
     display: flex;
     justify-content: center;
+    height: 270px;
     .test {
         width: 1300px;
         background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 70px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 70px;
     }
     p {
         font-weight: bold;
