@@ -5,7 +5,6 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import LandingPage from './components/LandingPage/LandingPage';
 import SignUp from './components/SignUp/SignUp';
 import SignUpSuccess from './components/SignUp/SignUpSuccess';
-import { HelmetProvider } from 'react-helmet-async';
 
 import './index.css';
 
@@ -15,7 +14,6 @@ function Root() {
   const location = useLocation();
 
   return (
-    <HelmetProvider> 
     <TransitionGroup component={null}>
       <CSSTransition key={location.key} classNames="fade" timeout={300}>
         <Routes location={location}>
@@ -24,7 +22,7 @@ function Root() {
           <Route path="/signup-success" element={<SignUpSuccess />} />
         </Routes>
       </CSSTransition>
-    </TransitionGroup></HelmetProvider> 
+    </TransitionGroup>
   );
 }
 
