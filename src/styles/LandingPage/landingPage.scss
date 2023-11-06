@@ -1,5 +1,6 @@
 .landing-page {
     display: grid;
+    
 }
 
 .section {
@@ -90,16 +91,7 @@
       .arrow-button {
             background-image: none;  
         }
-        .grid-item-image {
-            margin-left: 130px;
-        }
     }
-    
-    @media screen and (max-width: 950px) {
-          .grid-item-image {
-              margin-right: 130px;
-          }
-      }
 }
 
 
