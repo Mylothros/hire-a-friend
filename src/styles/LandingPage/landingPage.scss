@@ -1,8 +1,3 @@
-.landing-page {
-    display: grid;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr;
-}
-
 .section {
     text-align: center;
     margin-top: 10%;
@@ -11,6 +6,8 @@
 .area-1 {
     display: flex;
     justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
 
     .top-left-box {
         width: 130px;
@@ -81,7 +78,7 @@
     .grid-item-image {  
         margin-left: 100px;
         height: auto;
-        
+        text-align: right;
         img {
             height: 70%;
         }
@@ -92,12 +89,50 @@
             background-image: none;  
         }
     }
+    
 }
 
+@media screen and (max-width: 1000px) {
+    .area-1 {
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-gap: 40px;
+        justify-content: center;
+      }
+
+    .grid-1-button {
+        justify-content: center !important;
+        display: flex;
+    }
+
+    .grid-item-image {  
+        margin-left: 0px !important;;
+        height: auto;
+        text-align: center !important;
+    
+        img {
+            height: 70%;
+        }
+    }
+
+    .area-2 {
+        display: grid !important;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-gap: 40px;
+
+        .grid-item-image {  
+            height: auto;
+            justify-content: center !important;
+        }
+        
+      }
+}
 
 .area-2 {
     display: flex;
     justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
     
     h2 {
         font-size: 30px;
@@ -125,21 +160,22 @@
 
     .grid-item-image {  
         display: flex;
-        
+        justify-content: right;
+
         img {
             height: 70%;
         }
     }
-    @media screen and (max-width: 1300px) {
-        .grid-item-image {
-            margin-right: 50px;
-            img {
+    // @media screen and (max-width: 1300px) {
+    //     .grid-item-image {
+    //         margin-right: 50px;
+    //         img {
             
-            height: 50%;
-            margin-top: 150px;
-            }
-        }
-    }
+    //         height: 50%;
+    //         margin-top: 150px;
+    //         }
+    //     }
+    // }
 }
 
 // Area 3

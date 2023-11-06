@@ -13,6 +13,7 @@ const Article = () => {
   };
 
   return (
+    <div className="sign-up-success">
       <div className="sign-up-area-1">
         <div className="sign-up-grid-item">
             <div className="sign-up-top-left-box" onClick={handleHomePage}>hire @ friend</div>
@@ -28,6 +29,7 @@ const Article = () => {
             <img style={{ height: '400px' }} src={sign_up_success} alt="Landing Image" />
         </div>
       </div>
+    </div>
   );
 };
 
