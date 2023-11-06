@@ -99,7 +99,7 @@ const LandingPage = () => {
                 <div className="card">
                     <p>Connect with us
                         <div className="icons">
-                            <a href="" className="fa fa-instagram" target="_blank"></a>&nbsp;&nbsp;
+                            <a href="https://instagram.com/hirea.friend?igshid=MWQ1eDJvMndmd3lpNA==" className="fa fa-instagram" target="_blank"></a>&nbsp;&nbsp;
                             <a href="https://www.linkedin.com/in/hire-afriend-b5088a293/" className="fa fa-linkedin" target="_blank"></a>    
                         </div>
                     </p>
