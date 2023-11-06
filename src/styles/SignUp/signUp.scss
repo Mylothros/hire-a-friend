@@ -95,7 +95,6 @@
 }
 
 
-
 @media screen and (max-width: 1000px) {
     .sign-up-area-1 {
         display: grid;
@@ -125,7 +124,12 @@
         .sign-up-top-left-box {
             margin-left: 20px; 
         }
-        
-    
     }
+    .sign-up-grid-item-image {  
+        img {
+            width: 40%;
+            height: 90% !important;
+        }
+    }
+    
 }

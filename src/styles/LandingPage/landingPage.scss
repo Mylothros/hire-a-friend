@@ -1,14 +1,15 @@
-.section {
+.landing-page {
     text-align: center;
+}
+
+.section {
     margin-top: 10%;
 }
 
 .area-1 {
     display: flex;
     justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-
+    
     .top-left-box {
         width: 130px;
         background: #BE3455;
@@ -98,7 +99,11 @@
         grid-template-rows: 0.5fr 0.5fr;
         grid-gap: 40px;
         justify-content: center;
-      }
+    }
+
+    .area-1 button {
+        width: 200px;
+    }
 
     .grid-1-button {
         justify-content: center !important;
@@ -111,7 +116,8 @@
         text-align: center !important;
     
         img {
-            height: 70%;
+            width: 40%;
+            height: 90% !important;
         }
     }
 
@@ -124,15 +130,16 @@
             height: auto;
             justify-content: center !important;
         }
-        
+        img {
+            width: 60%;
+            height: 90%;
+        }
       }
 }
 
 .area-2 {
     display: flex;
     justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
     
     h2 {
         font-size: 30px;
@@ -141,18 +148,17 @@
         }
     }
 
-    ul {
-        list-style-type: none;
+    ul {     
         text-align: left;
-        font-size: 20px;
+        font-size: 15px;
+
         li {
             color: #454545;
             font-weight: 900;
-            text-indent: 0.5em;
+            line-height: 1 !important;
         }
-        li::marker {
-          content: '\2022';
-          font-size: 50px;
+        li::marker {  
+          font-size: 40px;
           color: #BE3455;
           
         }

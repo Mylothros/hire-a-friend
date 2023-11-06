@@ -24,7 +24,7 @@ const LandingPage = () => {
             <div className="section area-1">
                 <div className="grid-item">
                     <div className="top-left-box" onClick={handleHomePage}>hire @ friend</div>
-                    <h2>Where friendship MEETS <div className="highlighted-word-grid-1">&nbsp;OPPORTUNITY</div></h2>
+                    <h2 style={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>Where friendship MEETS <div className="highlighted-word-grid-1">&nbsp;OPPORTUNITY</div></h2>
                     <p>Join as <div className="highlighted-word">a professional or as client</div>. Earn money, find new connections and experience. </p>
                     <div className="grid-1-button">
                         <button className="arrow-button" onClick={handleSignupClick}>Sign up for free</button>
@@ -39,15 +39,19 @@ const LandingPage = () => {
                 <div className="grid-item">
                     <ul>
                         <h2>What is<div className="highlighted-word-grid-2">Hire a friend?</div></h2>
-                        <li>
+                        <li key="1">
                             Platform  for buying or selling services. From private piano lessons to hang-out buddy.
                         </li>
-                        <li>
-                            Possibility to use your skills and make money doing what you love</li>
-                        <li>
+                        <br />
+                        <li key="2">
+                            Possibility to use your skills and make money doing what you love
+                        </li>
+                        <br />
+                        <li key="3">
                             Possibility to hire professional and get services of different categories
                         </li>
-                        <li>
+                        <br />
+                        <li key="4">
                             Platform  for  learning and experiencing new things with a trustworthy professionals
                         </li>
                     </ul>
