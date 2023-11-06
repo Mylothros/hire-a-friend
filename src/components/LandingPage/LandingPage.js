@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet-async';
 import '../../styles/LandingPage/landingPage.scss';
 import grid_1_image from "../../assets/grid_1.png";
 import grid_2_image from "../../assets/grid_2.png";
@@ -21,6 +21,12 @@ const LandingPage = () => {
 
     return (
         <div className="landing-page">
+            <Helmet>
+        <title>Landing Page Title</title>
+        <meta property="og:title" content="Landing Page Title" />
+        <meta property="og:description" content="Your page description" />
+        <meta property="og:image" content={grid_1_image} />
+      </Helmet>
             <div className="section area-1">
                 <div className="grid-item">
                     <div className="top-left-box" onClick={handleHomePage}>hire @ friend</div>
