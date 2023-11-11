@@ -42,6 +42,13 @@ aliases:
     run:
       name: Build Project
       command: |
+        if [ "$CIRCLE_BRANCH" == "master" ]; then
+          echo "REACT_APP_URL=$REACT_AP_URL_PRODUCTION" > .env
+        elif [ "$CIRCLE_BRANCH" == "staging" ]; then
+          echo "REACT_APP_URL=$REACT_AP_URL_STAGING" > .env
+        else
+          echo "REACT_APP_URL=$REACT_AP_URL_DEVELOP" > .env
+        fi
         npm install
         CI=false npm run build
         cd build

@@ -1,5 +1,6 @@
 import {React, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import '../../styles/SignUp/signUp.scss';
 import sign_up from "../../assets/sign_up.png";
@@ -23,13 +24,17 @@ const Article = () => {
     setEmail(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
     setError(null);
-
     if (isValidEmail(email)) {
-      navigate('/signup-success');
+      const response = await axios.post(process.env.REACT_APP_URL, { email });
+      if(response.status === 200) {
+        navigate('/signup-success');
+      } 
+      else {
+        setError('Our api has problem please try again in a short time!!!');
+      }   
     } else {
       setError('Email is invalid');
     }
