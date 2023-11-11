@@ -1,42 +1,33 @@
-// Base styling for the entire landing page
 .landing-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 80px;
-    margin-right: 80px;
-}
-  
-  .section {
     text-align: center;
-    padding: 20px;
-  }
+}
 
-// Area 1
+.section {
+    margin-top: 10%;
+}
+
 .area-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;   
-    margin-top: 50px;
-
+    display: flex;
+    justify-content: center;
+    
     .top-left-box {
+        width: 130px;
         background: #BE3455;
         color: #F4E41E;
         border-radius: 10px;
         padding-top: 5px;
         padding-bottom: 5px;
         font-weight: 900;
-        width: 15%;
         margin-bottom: 60px;
+        cursor: pointer;
     }
 
     h2 {
-        display: flex;
         font-size: 30px;
         text-align: left;
 
         .highlighted-word-grid-1 {
+            display: contents;
             color: #454545;
             padding: 0 5px;
         }
@@ -54,14 +45,14 @@
     }
     
     .grid-1-button {
-        justify-content: center;
+        justify-content: left;
         display: flex;
     }
 
     button {
         font-size: 20px;
         border-radius: 20px;
-        width: 60%;
+        width: 350px;
         display: flex;
         justify-content: center;
         background: #BE3455;
@@ -70,30 +61,87 @@
         border: none;
         margin-top: 30px;
         cursor: pointer;
+
+        &:hover {
+            color: white;
+            opacity: 0.5;
+          }
     }
 
     .arrow-button {
         background-image: url("../../assets/arrow.png");
-        background-size: 25px; /* Set the size of the arrow image */
+        background-size: 25px;
         background-repeat: no-repeat;
         background-position: bottom 9px right 50px;        
     }
 
 
-    .image {  
-
+    .grid-item-image {  
+        height: auto;
+        text-align: right;
         img {
-            max-width: 100%;
-            height: auto;
+            height: 70%;
         }
     }
+
+    @media screen and (max-width: 1300px) {
+      .arrow-button {
+            background-image: none;  
+        }
+    }
+    
 }
 
-// Area 2
+@media screen and (max-width: 1000px) {
+    .area-1 {
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-gap: 40px;
+        justify-content: center;
+        & h2, p {
+            text-align: center;
+        }
+    }
+
+    .area-1 button {
+        width: 200px;
+    }
+
+    .grid-1-button {
+        justify-content: center !important;
+        display: flex;
+    }
+
+    .grid-item-image {  
+        margin-left: 0px !important;;
+        height: auto;
+        text-align: center !important;
+    
+        img {
+            width: 40%;
+            height: 90% !important;
+        }
+    }
+
+    .area-2 {
+        display: grid !important;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-gap: 40px;
+
+        .grid-item-image {  
+            height: auto;
+            justify-content: center !important;
+        }
+        img {
+            width: 60%;
+            height: 90%;
+        }
+      }
+}
+
 .area-2 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    width: 100%;
+    display: flex;
+    justify-content: center;
     
     h2 {
         font-size: 30px;
@@ -102,35 +150,34 @@
         }
     }
 
-    ul {
-        list-style-type: none;
+    ul {     
         text-align: left;
-        font-size: 20px;
+        font-size: 15px;
+
         li {
             color: #454545;
             font-weight: 900;
-            text-indent: 0.5em; // Adjust the negative value to control the space
+            line-height: 1 !important;
         }
-        li::marker {
-          content: '\2022';
-          font-size: 50px;
+        li::marker {  
+          font-size: 40px;
           color: #BE3455;
           
         }
       }
 
-    .image {
-        
+    .grid-item-image {  
+        display: flex;
+        justify-content: right;
+
         img {
-            max-width: 100%;
-            height: auto;
+            height: 70%;
         }
     }
 }
 
 // Area 3
 .area-3 {
-    width: 100%;
 
     h2 {
         font-size: 30px;
@@ -174,7 +221,8 @@
     
     .image-container {
         display: flex;
-        justify-content: space-between;
+        gap: 100px;
+        justify-content: center;
 
         .image-container--image {
             border-radius: 20px;
@@ -187,14 +235,9 @@
             img {
                 position: absolute;
                 right: 5px;
-                bottom: 0;
+                bottom: 5px;
                 width: 130px;
                 height: 130px;
-                border: 2px solid transparent;
-                transition: border-color 0.3s;
-                &:hover {
-                    border-color: #BE3455;;
-                }
             }
         }
     }
@@ -202,13 +245,18 @@
     button {
         font-size: 20px;
         border-radius: 20px;
-        width: 30%;
+        width: 350px;
         background: #BE3455;
         color: white;
         padding: 15px 20px;
         border: none;
         margin-top: 30px;
         cursor: pointer;
+        
+        &:hover {
+            color: white;
+            opacity: 0.5;
+          }
     }
 
     .arrow-button {
@@ -216,5 +264,46 @@
         background-size: 25px; /* Set the size of the arrow image */
         background-repeat: no-repeat;
         background-position: bottom 13px right 90px;        
+    }
+
+    @media screen and (max-width: 1200px) {
+        .image-container {
+            display: grid;
+            justify-content: center;
+            grid-gap: 10px;
+      }
+      .arrow-button {
+            background-image: none;  
+        }
+    }
+}
+
+// area 4
+.area-4 {
+    display: flex;
+    justify-content: center;
+    height: 270px;
+
+    .card {
+        width: 800px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 70px;
+    }
+    p {
+        font-weight: bold;
+        color: #454545;
+        margin: 0;
+        text-align: left;
+        a {
+            color: #BE3455;
+        }
+    }
+    .icons {
+        color: #BE3455;
+        text-align: right;
+        margin-top: -21px;
     }
 }
