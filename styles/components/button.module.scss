@@ -1,0 +1,45 @@
+.button-1 {
+    margin-top: 56px;
+    display: flex;
+    
+    .arrow-button {
+        width: 100%;
+        font-family: 'Plus Jakarta Sans Light';
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 150%;
+        border-radius: 300px;
+        margin-right: 152px;
+        background: #BE3455;
+        color: white;
+        padding: 15px 25px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        
+        &:hover {
+            color: white;
+            opacity: 0.5;
+        }
+
+        background-image: url("../../public/assets/images/arrow.png");
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: bottom 18px left 75%;
+    }
+
+    @media (max-width: 1500px) {
+        .arrow-button {background-image:none;}
+        
+    }  
+}
+.centerized-button {
+    display:flex;
+    margin-right: 0px;
+    justify-content: center;
+    
+    .arrow-button {
+        width: 40%;
+        margin-right: 0px;
+    }
+}  
