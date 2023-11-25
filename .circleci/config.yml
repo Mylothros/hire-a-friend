@@ -43,16 +43,16 @@ aliases:
       name: Build Project
       command: |
         if [ "$CIRCLE_BRANCH" == "master" ]; then
-          echo "REACT_APP_URL=$REACT_AP_URL_PRODUCTION" > .env
+          echo "REACT_APP_URL=$NEXT_PUBLIC_APP_URL_PODUCTION" > .env
         elif [ "$CIRCLE_BRANCH" == "staging" ]; then
-          echo "REACT_APP_URL=$REACT_AP_URL_STAGING" > .env
+          echo "REACT_APP_URL=$NEXT_PUBLIC_APP_URL_STAGING" > .env
         else
-          echo "REACT_APP_URL=$REACT_AP_URL_DEVELOP" > .env
+          echo "REACT_APP_URL=$NEXT_PUBLIC_APP_URL_DEVELOP" > .env
         fi
         npm install
         CI=false npm run build
-        cd build
-        zip ../build.zip -r * .[^.]*
+        cd out
+        zip ../out.zip -r * .[^.]*
         echo "Build successful"
 jobs:
   build:
@@ -127,12 +127,12 @@ jobs:
             echo $AWS_BUCKET_NAME
             if [ "${CIRCLE_BRANCH}" == "master" ]
             then
-              aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET_NAME} --delete
+              aws --region ${AWS_REGION} s3 sync ~/repo/out s3://${AWS_BUCKET_NAME} --delete
             elif [ "${CIRCLE_BRANCH}" == "staging" ]
             then
-              aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET_NAME} --delete
+              aws --region ${AWS_REGION} s3 sync ~/repo/out s3://${AWS_BUCKET_NAME} --delete
             else
-              aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET_NAME} --delete
+              aws --region ${AWS_REGION} s3 sync ~/repo/out s3://${AWS_BUCKET_NAME} --delete
             fi
 
   deploy-to-aws-cloudfront:

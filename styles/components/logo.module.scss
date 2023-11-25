@@ -1,0 +1,12 @@
+.top-left-box {
+    width: 242px;
+    height: 59.5px;
+    background: #BE3455;
+    border-radius: 12.099px;
+
+    margin-bottom: 100px;
+    cursor: pointer;
+    & .link {
+        text-decoration: none;
+    } 
+}
