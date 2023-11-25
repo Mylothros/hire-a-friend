@@ -8,7 +8,7 @@ executors:
     working_directory: ~/repo
   terraform-executor:
     docker:
-      - image: hashicorp/terraform:1.3.9
+      - image: hashicorp/terraform:1.6
 
 aliases:
   - &show-current-branch-name
