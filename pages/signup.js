@@ -31,9 +31,11 @@ const Article = () => {
         if (response.status === 200) {
           router.push('/signup-success');
         } else {
+          console.log("body is: ",response.body)
           setError('Our API has a problem, please try again later!!!');
         }
       } catch (error) {
+        console.log(error)
         setError('Our API has a problem, please try again later!!!');
       }
     } else {
