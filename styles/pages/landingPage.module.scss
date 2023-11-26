@@ -1,11 +1,10 @@
 .container {
     display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  height: auto;
-  max-height: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: 996px;
 
     .area-1 { 
         display: grid;
@@ -74,7 +73,7 @@
     .area-2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 50px auto;
+        margin: 195px auto;
 
         .target-paragraph-1 {
             font-family: 'Unbounded';
@@ -128,7 +127,7 @@
 
     // Area 3
     .area-3 {
-        margin-top: 50px;
+        margin-top: 195px;
         margin-right: auto;
         margin-left: auto;
         margin: 0px auto;
@@ -194,7 +193,7 @@
         
         .card {
         
-            margin-top: 300px;
+            margin-top: 195px;
             background-color: rgba(255, 255, 255, 0.5);
             height: 137px;
             border: 1.3px solid var(--stroke-gradient, #FFF);
