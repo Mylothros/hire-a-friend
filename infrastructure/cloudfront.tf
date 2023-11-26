@@ -7,6 +7,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   price_class         = "PriceClass_All"
   enabled             = true
   is_ipv6_enabled     = false
+  default_root_object = "index.html"
 
   origin {
     domain_name = aws_s3_bucket.hire_a_friend_app_s3_bucket.bucket_regional_domain_name
