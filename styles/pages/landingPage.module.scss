@@ -5,10 +5,10 @@
     margin: 0 auto;
     text-align: center;
     background: url('../../public/assets/images/noise.png'),
-    -webkit-linear-gradient(linear-gradient(45deg, #be345481, #ffff002c, #be34547c, #be3454c2, #BE3455));
+    -webkit-linear-gradient(linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455));
     background: 
     url('../../public/assets/images/noise.png'),
-    linear-gradient(45deg, #be345481, #ffff002c, #be34547c, #be3454c2, #BE3455);
+    linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455);
 
     .area-1 { 
         display: grid;
@@ -84,7 +84,6 @@
             font-size: 48px;
             font-weight: 500;
             line-height: 122%;
-            letter-spacing: -0.912px;
             text-align: left;
 
             > span {
@@ -99,7 +98,6 @@
             font-family: 'Plus Jakarta Sans Light';
             font-size: 28px;
             font-weight: 700;
-            letter-spacing: -0.608px;
             text-align: left;
 
             .target-paragraph-2-list {
@@ -109,7 +107,7 @@
             > .target-paragraph-2-list span {
                 vertical-align: top;
                 margin-bottom: 50px;
-                margin-left: 11.12px; 
+                margin-left: 20.12px; 
             }
         }
 
@@ -117,6 +115,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 60px;
             margin-right: 0px;
             margin-left: auto;
             max-width:  728px;
