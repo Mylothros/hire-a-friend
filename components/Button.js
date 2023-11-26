@@ -8,7 +8,7 @@ const ButtonSlot = ({ slot1, slot2 }) => {
     <div>
       {slot1 && 
       <div className={styles['button-1']}>
-          <Link className={styles['arrow-button']} href="/signup" as="/signup.html"> {slot1}</Link>
+          <Link className={styles['arrow-button']} href="/signup" as="/index.html"> {slot1}</Link>
       </div>
       }
       {slot2 && 
