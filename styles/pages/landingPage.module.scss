@@ -1,16 +1,20 @@
 .container {
     display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  height: auto;
-  max-height: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 100%;
+    text-align: center;
+    background: url('../../public/assets/images/noise.png'),
+    -webkit-linear-gradient(linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455));
+    background: 
+    url('../../public/assets/images/noise.png'),
+    linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455);
 
     .area-1 { 
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 130px auto;
+        margin-top: 130px;
+        margin-right: auto;
+        margin-left: auto;
 
         .grid-item {
             overflow: hidden;
@@ -54,8 +58,8 @@
             margin-right: 0px;
             margin-left: auto;
             justify-content: center;
-            max-width: 589px;
-            max-height: 669px;
+            max-width: 615px;
+            max-height: 690px;
 
             .img {
                 max-width: 100%;
@@ -74,14 +78,16 @@
     .area-2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 50px auto;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+
 
         .target-paragraph-1 {
             font-family: 'Unbounded';
             font-size: 48px;
             font-weight: 500;
             line-height: 122%;
-            letter-spacing: -0.912px;
             text-align: left;
 
             > span {
@@ -96,7 +102,6 @@
             font-family: 'Plus Jakarta Sans Light';
             font-size: 28px;
             font-weight: 700;
-            letter-spacing: -0.608px;
             text-align: left;
 
             .target-paragraph-2-list {
@@ -106,7 +111,7 @@
             > .target-paragraph-2-list span {
                 vertical-align: top;
                 margin-bottom: 50px;
-                margin-left: 11.12px; 
+                margin-left: 20.12px; 
             }
         }
 
@@ -114,6 +119,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 60px;
             margin-right: 0px;
             margin-left: auto;
             max-width:  728px;
@@ -128,10 +134,9 @@
 
     // Area 3
     .area-3 {
-        margin-top: 50px;
+        margin-top: 110px;
         margin-right: auto;
         margin-left: auto;
-        margin: 0px auto;
 
         .target-paragraph {
             color: #FFF;
@@ -190,11 +195,11 @@
     .area-4 {   
         max-width: 1920px;
         width: 100%;
-        margin: 0px auto;
+        margin-top: 190px;
+        margin-right: auto;
+        margin-left: auto;
         
         .card {
-        
-            margin-top: 300px;
             background-color: rgba(255, 255, 255, 0.5);
             height: 137px;
             border: 1.3px solid var(--stroke-gradient, #FFF);
