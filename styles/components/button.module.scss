@@ -16,16 +16,19 @@
         border: none;
         cursor: pointer;
         text-decoration: none;
-        
-        &:hover {
-            color: white;
-            opacity: 0.5;
-        }
-
         background-image: url("../../public/assets/images/arrow.png");
         background-size: 30px;
         background-repeat: no-repeat;
-        background-position: bottom 18px left 75%;
+        background-position: bottom 20px left 75%;
+        transition: color 0.5s ease, background 0.5s ease;
+
+        &:hover {
+            color: #BE3455;
+            background: white;
+            
+        }
+
+        
     }
 
     @media (max-width: 1500px) {

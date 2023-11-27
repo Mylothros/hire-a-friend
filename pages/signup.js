@@ -21,25 +21,21 @@ const Article = () => {
     setEmail(event.target.value);
   };
 
-  const handleHomePage = () => {
-    router.push('/');
-  };
-  
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError(null);
+
     if (isValidEmail(email)) {
       try {
-        console.log(process.env.NEXT_PUBLIC_APP_URL)
         const response = await axios.post(process.env.NEXT_PUBLIC_APP_URL, { email });
         if (response.status === 200) {
-          // Use Next.js router for navigation
-          // Make sure to import useRouter from 'next/router'
-          useRouter().push('/signup-success');
+          router.push('/signup-success');
         } else {
+          console.log("body is: ",response.body)
           setError('Our API has a problem, please try again later!!!');
         }
       } catch (error) {
+        console.log(error)
         setError('Our API has a problem, please try again later!!!');
       }
     } else {
