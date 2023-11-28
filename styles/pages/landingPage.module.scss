@@ -17,6 +17,7 @@
         margin-left: auto;
 
         .grid-item {
+            margin-left: 20px;
             overflow: hidden;
         }
 
@@ -55,7 +56,7 @@
         .image {
             display: flex;
             align-items: center;
-            margin-right: 0px;
+            margin-right: 20px;
             margin-left: auto;
             justify-content: center;
             max-width: 615px;
@@ -82,6 +83,9 @@
         margin-right: auto;
         margin-left: auto;
 
+        .grid-item {
+            margin-left: 20px;
+        }
 
         .target-paragraph-1 {
             font-family: 'Unbounded';
@@ -120,7 +124,7 @@
             justify-content: center;
             align-items: center;
             margin-top: 60px;
-            margin-right: 0px;
+            margin-right: 20px;
             margin-left: auto;
             max-width:  728px;
             max-height: 732px;

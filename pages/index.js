@@ -63,7 +63,7 @@ const LandingPage = () => {
             </div>
 
             <div className={styles['area-2']}>
-                <div>
+                <div className={styles['grid-item']}>
                     <p className={styles['target-paragraph-1']}>
                         <span>What is <br/></span>
                         <span>Hire a friend?</span>
