@@ -44,13 +44,10 @@ aliases:
       command: |
         if [ "$CIRCLE_BRANCH" == "master" ]; then
           echo "NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL_PODUCTION" > .env.local
-          echo "NEXT_PUBLIC_STATIC_URL=$NEXT_PUBLIC_STATIC_URL" > .env.local
         elif [ "$CIRCLE_BRANCH" == "staging" ]; then
           echo "NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL_STAGING" > .env.local
-          echo "NEXT_PUBLIC_STATIC_URL=$NEXT_PUBLIC_STATIC_URL" > .env.local
         else
           echo "NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL_DEVELOP" > .env.local
-          echo "NEXT_PUBLIC_STATIC_URL=$NEXT_PUBLIC_STATIC_URL" > .env.local
         fi
         npm install
         CI=false npm run build

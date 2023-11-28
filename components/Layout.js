@@ -15,8 +15,9 @@ const Layout = ({ children }) => {
         />
         <meta
           property="og:image"
-          content={process.env.NEXT_PUBLIC_STATIC_URL + "assets/images/grid_1.png"}
+          content="http://test-bucket-hire.s3-website-us-east-1.amazonaws.com/assets/images/grid_1.png"
         />
+
       </Head>
       {children}
     </>
