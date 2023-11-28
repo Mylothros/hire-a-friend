@@ -3,13 +3,14 @@
     display: flex;
     
     .arrow-button {
+        max-width: 670px;
+        padding-left: 32px;
         width: 100%;
         font-family: 'Plus Jakarta Sans Light';
         font-size: 28px;
         font-weight: 600;
         line-height: 150%;
         border-radius: 300px;
-        margin-right: 152px;
         background: #BE3455;
         color: white;
         padding: 15px 25px;
@@ -26,9 +27,7 @@
             color: #BE3455;
             background: white;
             
-        }
-
-        
+        } 
     }
 
     @media (max-width: 1500px) {
@@ -36,6 +35,7 @@
         
     }  
 }
+
 .centerized-button {
     display:flex;
     margin-right: 0px;
@@ -45,4 +45,4 @@
         width: 40%;
         margin-right: 0px;
     }
-}  
+}
