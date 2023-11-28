@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
         />
         <meta
           property="og:image"
-          content={NEXT_PUBLIC_STATIC_URL + "assets/images/grid_1.png"}
+          content={process.env.NEXT_PUBLIC_STATIC_URL + "assets/images/grid_1.png"}
         />
       </Head>
       {children}
