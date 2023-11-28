@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -10,11 +10,19 @@ import styles from '../styles/pages/signUp.module.scss';
 import sign_up from "../public/assets/images/sign_up.png";
 
 const signup = () => {
+
   const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
 
   const router = useRouter();
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+  
   const isValidEmail = (email) => {
     return /\S+@\S+\.\S+/.test(email);
   }

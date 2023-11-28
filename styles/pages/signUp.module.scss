@@ -1,8 +1,9 @@
+
 .container {
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 100vh;
+    height: 140vh;
     gap: 250px;
     background: url('../../public/assets/images/noise.png'),
     -webkit-linear-gradient(linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455));
@@ -11,7 +12,7 @@
     linear-gradient(45deg, #ffff0027 25%, #be34547c, #be3454c2, #BE3455);
     
     .area-1 {
-        margin-top: 220px;
+        margin-top: 120px;
         margin-left: 20px;
     
         .target-paragraph-1 {
@@ -76,7 +77,7 @@
 
     .image-area-2 {
         margin-right: 20px;
-        margin-top: 220px;
+        margin-top: 120px;
         display: flex;
         justify-content: center;
         align-items: center;
