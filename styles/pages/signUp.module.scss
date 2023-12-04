@@ -3,13 +3,9 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 140vh;
+    height: 100vh;
     gap: 250px;
-    background: url('../../public/assets/images/noise.png'),
-    -webkit-linear-gradient(linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455));
-    background: 
-    url('../../public/assets/images/noise.png'),
-    linear-gradient(45deg, #ffff0027 25%, #be34547c, #be3454c2, #BE3455);
+    background: url('../../public/assets/images/noise.png');
     
     .area-1 {
         margin-top: 120px;

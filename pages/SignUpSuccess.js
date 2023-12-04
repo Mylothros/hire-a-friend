@@ -16,9 +16,15 @@ const SignUpSuccess = () => {
   const router = useRouter();
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    const originalBackground = document.body.style.background;
+  
+    document.body.style.background = `
+      -webkit-linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455),
+      linear-gradient(45deg, #ffff0027 25%, #be34547c, #be3454c2, #BE3455)
+    `;
+  
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.background = originalBackground;
     };
   }, []);
 
