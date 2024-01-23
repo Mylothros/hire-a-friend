@@ -1,16 +1,5 @@
 @import './fonts/fonts.scss';
 
-body {
-  margin: 0px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #FFFFFF;
-  
-  // linear-gradient(to top right, #ffff0054, #ffff0054 25%, #be34547c 50%, #BE3455 75%);
-  // background-repeat: no-repeat;
-  
-}
-
 .fade-enter {
   display:none;
   opacity: 0;
