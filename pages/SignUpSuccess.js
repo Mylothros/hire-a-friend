@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 
 import Logo from 'components/LogoSvg.js';
 import Button from 'components/Button.js';
+import Layout from 'components/Layout';
 
 import styles from '../styles/pages/signUpSuccess.module.scss';
 import sign_up from "../public/assets/images/sign_up_success.png";
