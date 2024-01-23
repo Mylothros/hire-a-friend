@@ -1,8 +1,35 @@
+.spinner {    
+   margin-top: 5%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 4px solid rgba(255, 255, 255, 0.3);
+   border-radius: 50%;
+   border-top: 4px solid #fff;
+   width: 35px;
+   height: 30px;
+   animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
 .button-1 {
     margin-top: 56px;
     display: flex;
-    
     .arrow-button {
+        &--no-arrow {
+            min-height: 72px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            max-width: 670px;
+            width: 100%;
+            border-radius: 300px;
+            background: #BE3455;
+            cursor: pointer;
+        }
         max-width: 670px;
         padding-left: 32px;
         width: 100%;
@@ -21,7 +48,7 @@
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: bottom 20px left 75%;
-        transition: color 0.5s ease, background 0.5s ease;
+        transition: color 0.5s ease;
 
         &:hover {
             color: #BE3455;

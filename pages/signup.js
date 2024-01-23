@@ -13,6 +13,8 @@ const signup = () => {
 
   const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
+  const [dataSubmited, setDataSubmited] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const router = useRouter();
 
@@ -40,17 +42,22 @@ const signup = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError(null);
-
-    if (isValidEmail(email)) {
+    if (isValidEmail(email) && !isSubmitting) {
+      setIsSubmitting(true);
+      setDataSubmited(true);
       try {
         const response = await axios.post(process.env.NEXT_PUBLIC_APP_URL, { email });
         if (response.status === 200) {
           router.push('/SignUpSuccess/index.html');
         } 
         else {
+          setDataSubmited(false);
+          setIsSubmitting(false);
           setError('Our API has a problem, please try again later!!!');
         }
       } catch (error) {
+        setDataSubmited(false);
+        setIsSubmitting(false);
         setError('Our API has a problem, please try again later!!!');
       }
     } 
@@ -79,9 +86,9 @@ const signup = () => {
                   onChange={handleChange}
                 />
                 {error && <h3 style={{ color: 'red', fontSize: '20px'}}>{error}</h3>}
-              </span>   
+              </span> 
           </p>
-          <Button slot3="Sign up" />  
+          <Button slot3="Sign up" dataSubmited={dataSubmited} />  
         </div>
         <div className={styles['image-area-2']}>
           <Image src={sign_up} className={styles['img']}  alt="Landing Image" />
