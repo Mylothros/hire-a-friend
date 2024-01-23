@@ -51,12 +51,12 @@ const signup = () => {
           router.push('/SignUpSuccess/index.html');
         } 
         else {
-          setDataSubmited(false);
+         
           setIsSubmitting(false);
           setError('Our API has a problem, please try again later!!!');
         }
       } catch (error) {
-        setDataSubmited(false);
+    
         setIsSubmitting(false);
         setError('Our API has a problem, please try again later!!!');
       }
