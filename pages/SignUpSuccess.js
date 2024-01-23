@@ -10,11 +10,6 @@ import styles from '../styles/pages/signUpSuccess.module.scss';
 import sign_up from "../public/assets/images/sign_up_success.png";
 
 const SignUpSuccess = () => {
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState(null);
-
-  const router = useRouter();
-
   useEffect(() => {
     const originalBackground = document.body.style.background;
   
@@ -28,37 +23,12 @@ const SignUpSuccess = () => {
     };
   }, []);
 
-  const isValidEmail = (email) => {
-    return /\S+@\S+\.\S+/.test(email);
-  }
-
-  const handleChange = event => {
-    setEmail(event.target.value);
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setError(null);
-
-    if (isValidEmail(email)) {
-      try {
-        const response = await axios.post(process.env.NEXT_PUBLIC_APP_URL, { email });
-        if (response.status === 200) {
-          router.push('/signup-success');
-        } 
-        else {
-          setError('Our API has a problem, please try again later!!!');
-        }
-      } catch (error) {
-        setError('Our API has a problem, please try again later!!!');
-      }
-    } 
-    else {
-      setError('Email is invalid.');
-    }
-  };
-
   return (
+    <Layout 
+      title="Custom Title"
+      description="Custom Description"
+      ogTitle="Custom OG Title"
+      ogDescription="Custom OG Description">
       <div className={styles['container']}>
         <div className={styles['area-1']}>
           <Logo />
@@ -72,6 +42,7 @@ const SignUpSuccess = () => {
           <Image src={sign_up} className={styles['img']}  alt="Landing Image" />
         </div>
       </div>
+    </Layout>
   );
 };
 

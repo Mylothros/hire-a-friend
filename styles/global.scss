@@ -1,25 +1,10 @@
 @import './fonts/fonts.scss';
 
-.fade-enter {
-  display:none;
+.fade-in {
   opacity: 0;
-  transform: translate(0, 25px);
-  z-index: 1;
+  transition: opacity 1.3s ease-in-out;
 }
 
-.fade-enter.fade-enter-active {
+.fade-in-entered {
   opacity: 1;
-  transform: translate(0, 0);
-  transition: opacity 250ms ease-out, transform 300ms ease;
-}
-
-.fade-exit {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.fade-exit.fade-exit-active {
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: opacity 250ms ease-out, transform 300ms ease;
 }
