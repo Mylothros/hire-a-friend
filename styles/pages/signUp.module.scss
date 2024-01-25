@@ -2,14 +2,17 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 100vh;
     gap: 250px;
     background: url('../../public/assets/images/noise.png');
-    
+    margin-bottom: 85px;
     .area-1 {
         margin-top: 120px;
         margin-left: 20px;
-    
+
+        @media (max-width: 1220px) {
+
+            margin-top: 85px;
+        }
         .target-paragraph-1 {
             color: #BE3455;
             text-align: left;
@@ -17,7 +20,6 @@
             font-size: 48px;
             font-weight: 500;
             line-height: 122%;
-
             > span {
                 &:nth-child(1) { 
                     color: #BE3455;
@@ -29,8 +31,13 @@
                     font-size: 32px;
                     font-weight: 800;
                 }
-
             }
+            @media (max-width: 1220px) {
+                max-width: 390px;
+            }
+        }
+        @media (max-width: 1220px) {
+            width: 710px;
         }
         
         .target-paragraph-2 {
@@ -64,12 +71,14 @@
                         font-weight: 800;
                         border-radius: 7.784px;
                         background: var(--white-gradient, linear-gradient(90deg, #FFF 0.89%, rgba(252, 252, 252, 0.90) 99.89%));
+                        @media (max-width: 1500px) {
+                            max-width: 610px;
+                        }
                     }
                 }
             }
         }
     }
-
     .image-area-2 {
         margin-right: 20px;
         margin-top: 120px;
@@ -78,10 +87,23 @@
         align-items: center;
         max-width:  540px;
         max-height: 734px;
-
         .img {
             max-width: 100%;
             height: auto;
         }
+        @media (max-width: 1500px) {
+            max-width: 450px;
+            max-height: 613px;   
+        }
+        @media (max-width: 1220px) {
+            max-width: 272px;
+            max-height: 370px;
+            position: absolute;
+            margin-left: 400px;
+            margin-top: 155px;
+        }
+    }    
+    @media (max-width: 1500px) {
+        gap: 0px;
     }
 }

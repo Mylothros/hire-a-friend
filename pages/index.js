@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image'
 
 import Logo from 'components/LogoSvg.js';
@@ -15,7 +15,17 @@ import grid_2_image from "public/assets/images/grid_2.png";
 import Layout from 'components/Layout';
 
 const LandingPage = () => {
-
+    useEffect(() => {
+        const originalBackground = document.body.style.background; 
+        document.body.style.background = `
+          url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.png'),
+          -webkit-linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455),
+          linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455)
+        `;   
+        return () => {
+          document.body.style.background = originalBackground;
+        };
+      }, []);
     const card1Slot = {
         word1: "Step 1",
         word2: "Sign-up",
@@ -70,19 +80,27 @@ const LandingPage = () => {
                     </p>
                     <div className={styles['target-paragraph-2']}>
                         <div className={styles['target-paragraph-2-list']}>
-                            <Circle /><span>Platform  for buying or selling services. From <br/><div>private piano lessons to hang-out buddy.</div></span>
+                            <div>
+                            <Circle />
+                        </div><span>Platform  for buying or selling services. From <br/><div>private piano lessons to hang-out buddy.</div></span>
                         </div>
                   
                         <div className={styles['target-paragraph-2-list']}>
-                        <Circle /><span>Possibility to use your skills and make <br/> <div>money doing what you love.</div></span>
+                        <div>
+                            <Circle />
+                        </div><span>Possibility to use your skills and make <br/> <div>money doing what you love.</div></span>
                         </div>
               
                         <div className={styles['target-paragraph-2-list']}>
-                        <Circle /><span>Possibility to hire a professional and get <br/> <div>services of different categories.</div></span>
+                        <div>
+                            <Circle />
+                        </div><span>Possibility to hire a professional and get <br/> <div>services of different categories.</div></span>
                         </div>
                 
                         <div className={styles['target-paragraph-2-list']}>
-                        <Circle /><span>Platform  for  learning and experiencing new <br/> <div>things with a trustworthy professional.</div></span>
+                        <div>
+                            <Circle />
+                        </div><span>Platform  for  learning and experiencing new <br/> <div>things with a trustworthy professional.</div></span>
                         </div>
                     </div>
                 </div>

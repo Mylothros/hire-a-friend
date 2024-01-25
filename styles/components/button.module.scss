@@ -18,6 +18,9 @@
 .button-1 {
     margin-top: 56px;
     display: flex;
+    @media (max-width: 1220px) {
+        justify-content: center;
+    }
     .arrow-button {
         &--no-arrow {
             max-height: 72px;
@@ -31,7 +34,6 @@
             cursor: pointer;
         }
         max-width: 670px;
-        padding-left: 32px;
         width: 100%;
         font-family: 'Plus Jakarta Sans Light';
         font-size: 28px;
@@ -40,36 +42,32 @@
         border-radius: 300px;
         background: #BE3455;
         color: white;
-        padding: 15px 25px;
+        padding: 20px 0px 20px 0px;
         border: none;
         cursor: pointer;
         text-decoration: none;
+        
         background-image: url("../../public/assets/images/arrow.png");
-        background-size: 30px;
+        background-size: 35px;
         background-repeat: no-repeat;
-        background-position: bottom 20px left 75%;
+        background-position: bottom 20px left 78%;
         transition: color 0.5s ease;
-
+        @media (max-width: 1500px) {
+            max-width: 644px;
+            padding: 20px 0px 20px 0px;
+        }
+        @media (max-width: 1220px) {
+            max-width: 542px;
+        }
         &:hover {
             color: #BE3455;
-            background: white;
-            
-        } 
+            background: white;  
+        }
     }
-
-    @media (max-width: 1500px) {
-        .arrow-button {background-image:none;}
-        
-    }  
 }
 
 .centerized-button {
     display:flex;
     margin-right: 0px;
     justify-content: center;
-    
-    .arrow-button {
-        width: 40%;
-        margin-right: 0px;
-    }
 }

@@ -23,6 +23,7 @@ const signup = () => {
     const originalBackground = document.body.style.background;
   
     document.body.style.background = `
+      url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.png'),
       -webkit-linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455),
       linear-gradient(45deg, #ffff0027 25%, #be34547c, #be3454c2, #BE3455)
     `;

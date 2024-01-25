@@ -1,4 +1,9 @@
 @import './fonts/fonts.scss';
+body, html {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .fade-in {
   opacity: 0;
