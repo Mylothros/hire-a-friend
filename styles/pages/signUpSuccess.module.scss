@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    gap: 130px;
+    background: url('../../public/assets/images/noise.png');
+    
+    .area-1 {
+        margin-top: 120px;
+        margin-left: 20px;
+    
+        .target-paragraph-1 {
+            color: #BE3455;
+            text-align: left;
+            font-family: 'Unbounded';
+            font-size: 48px;
+            font-weight: 500;
+          
+
+            > span {
+                &:nth-child(1) { 
+                    color: #BE3455;
+                }
+
+                &:nth-child(2) {
+                    display: block;
+                    margin-top: 32px;
+                    color: #FFF;
+                    font-family: 'Plus Jakarta Sans';
+                    font-size: 32px;
+                    font-weight: 800;
+                }
+
+            }
+        }
+    }
+
+    .image-area-2 {
+        margin-right: 20px;
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width:  688px;
+        max-height: 702.706px;
+
+        .img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

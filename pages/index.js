@@ -12,7 +12,7 @@ import styles from 'styles/pages/landingPage.module.scss';
 import grid_1_image from "public/assets/images/grid_1.png";
 import grid_2_image from "public/assets/images/grid_2.png";
 
-import Layout from 'components/Layout'; // Path to your Layout component
+import Layout from 'components/Layout';
 
 const LandingPage = () => {
 
@@ -40,7 +40,7 @@ const LandingPage = () => {
     }
 
     return (
-        <Layout >
+        <Layout>
         <div className={styles['container']}>
             <div className={styles['area-1']}>
                 <div className={styles['grid-item']}>
@@ -63,7 +63,7 @@ const LandingPage = () => {
             </div>
 
             <div className={styles['area-2']}>
-                <div>
+                <div className={styles['grid-item']}>
                     <p className={styles['target-paragraph-1']}>
                         <span>What is <br/></span>
                         <span>Hire a friend?</span>

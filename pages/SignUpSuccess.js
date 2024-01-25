@@ -1,15 +1,50 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
+import Logo from 'components/LogoSvg.js';
+import Button from 'components/Button.js';
+import Layout from 'components/Layout';
 
+import styles from '../styles/pages/signUpSuccess.module.scss';
+import sign_up from "../public/assets/images/sign_up_success.png";
 
-const Article = () => {
-
+const SignUpSuccess = () => {
+  useEffect(() => {
+    const originalBackground = document.body.style.background;
+  
+    document.body.style.background = `
+      -webkit-linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455),
+      linear-gradient(45deg, #ffff0027 25%, #be34547c, #be3454c2, #BE3455)
+    `;
+  
+    return () => {
+      document.body.style.background = originalBackground;
+    };
+  }, []);
 
   return (
-    <div className="sign-up-success">
-      hey
-    </div>
+    <Layout 
+      title="Custom Title"
+      description="Custom Description"
+      ogTitle="Custom OG Title"
+      ogDescription="Custom OG Description">
+      <div className={styles['container']}>
+        <div className={styles['area-1']}>
+          <Logo />
+          <p className={styles['target-paragraph-1']}>
+              <span>Your pre-registration is <br/> complete.<br/></span>
+              <span>You will recieve a notification when the project<br/>starts<br/></span>
+          </p>
+          <Button slot4="Go to Homepage" />  
+        </div>
+        <div className={styles['image-area-2']}>
+          <Image src={sign_up} className={styles['img']}  alt="Landing Image" />
+        </div>
+      </div>
+    </Layout>
   );
 };
 
-export default Article;
+export default SignUpSuccess;

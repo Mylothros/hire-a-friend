@@ -12,16 +12,18 @@
     .area-1 { 
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-top: 130px;
+        margin-top: 120px;
         margin-right: auto;
         margin-left: auto;
+        gap: 83px;
 
         .grid-item {
+            margin-left: 20px;
             overflow: hidden;
         }
 
         .target-paragraph-1 {
-            font-family: 'Unbounded';
+           
             font-size: 48px;
             font-weight: 500;
             line-height: 122%;
@@ -55,7 +57,7 @@
         .image {
             display: flex;
             align-items: center;
-            margin-right: 0px;
+            margin-right: 20px;
             margin-left: auto;
             justify-content: center;
             max-width: 615px;
@@ -81,7 +83,11 @@
         margin-top: 50px;
         margin-right: auto;
         margin-left: auto;
-
+        gap: 20px;
+        
+        .grid-item {
+            margin-left: 20px;
+        }
 
         .target-paragraph-1 {
             font-family: 'Unbounded';
@@ -120,7 +126,7 @@
             justify-content: center;
             align-items: center;
             margin-top: 60px;
-            margin-right: 0px;
+            margin-right: 20px;
             margin-left: auto;
             max-width:  728px;
             max-height: 732px;
