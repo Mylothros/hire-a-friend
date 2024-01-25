@@ -10,12 +10,20 @@ import Card from 'components/Card.js';
 
 import styles from 'styles/pages/landingPage.module.scss';
 import grid_1_image from "public/assets/images/grid_1.png";
+import grid_1_tablet from "public/assets/images/grid_1_tablet.png";
 import grid_2_image from "public/assets/images/grid_2.png";
+import grid_2_tablet from "public/assets/images/grid_2_tablet.png";
 
 import Layout from 'components/Layout';
 
 const LandingPage = () => {
+    const [windowWidth, setWindowWidth] = useState(
+        typeof window !== 'undefined' ? window.innerWidth : 1920
+      );
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', handleResize);
+          }
         const originalBackground = document.body.style.background; 
         document.body.style.background = `
           url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.png'),
@@ -23,9 +31,13 @@ const LandingPage = () => {
           linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455)
         `;   
         return () => {
-          document.body.style.background = originalBackground;
-        };
+            document.body.style.background = originalBackground;
+            window.removeEventListener('resize', handleResize);
+          };
       }, []);
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
     const card1Slot = {
         word1: "Step 1",
         word2: "Sign-up",
@@ -68,7 +80,7 @@ const LandingPage = () => {
                     <Button slot1="Sign up for free"></Button>
                 </div>
                 <div className={styles['image']}>
-                    <Image src={grid_1_image} className={styles['img']} alt="Landing Image" />
+                    <Image src={windowWidth > 1220 ? grid_1_image : grid_1_tablet} className={styles['img']} alt="Landing Image" />
                 </div>
             </div>
 
@@ -82,30 +94,30 @@ const LandingPage = () => {
                         <div className={styles['target-paragraph-2-list']}>
                             <div>
                             <Circle />
-                        </div><span>Platform  for buying or selling services. From <br/><div>private piano lessons to hang-out buddy.</div></span>
+                        </div><span>Platform  for buying or selling services. From <div>private piano lessons to hang-out buddy.</div></span>
                         </div>
                   
                         <div className={styles['target-paragraph-2-list']}>
                         <div>
                             <Circle />
-                        </div><span>Possibility to use your skills and make <br/> <div>money doing what you love.</div></span>
+                        </div><span>Possibility to use your skills and make  money doing<div> what you love.</div></span>
                         </div>
               
                         <div className={styles['target-paragraph-2-list']}>
                         <div>
                             <Circle />
-                        </div><span>Possibility to hire a professional and get <br/> <div>services of different categories.</div></span>
+                        </div><span>Possibility to hire a professional and get  <div>services of different categories.</div></span>
                         </div>
                 
                         <div className={styles['target-paragraph-2-list']}>
                         <div>
                             <Circle />
-                        </div><span>Platform  for  learning and experiencing new <br/> <div>things with a trustworthy professional.</div></span>
+                        </div><span>Platform  for  learning and experiencing new  <div>things with a trustworthy professional.</div></span>
                         </div>
                     </div>
                 </div>
                 <div className={styles['image']}>
-                    <Image src={grid_2_image} className={styles['img']} alt="Landing Image" />
+                    <Image src={windowWidth > 1220 ? grid_2_image : grid_2_tablet} className={styles['img']} alt="Landing Image" />
                 </div>
             </div>
             <div className={styles['area-3']}>

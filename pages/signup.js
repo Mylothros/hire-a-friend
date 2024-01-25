@@ -95,8 +95,10 @@ const signup = () => {
                   {error && <h3 style={{ color: 'red', fontSize: '20px'}}>{error}</h3>}
                 </span> 
             </p>
-            <Button slot3="Sign up" dataSubmited={dataSubmited} />  
-          </div>
+            <div >
+              <Button slot3="Sign up" dataSubmited={dataSubmited} />  
+            </div>
+            </div>
           <div className={styles['image-area-2']}>
             <Image src={sign_up} className={styles['img']}  alt="Landing Image" />
           </div>
