@@ -9,18 +9,17 @@ import styles from '../styles/pages/signUpSuccess.module.scss';
 import sign_up from "../public/assets/images/sign_up_success.png";
 
 const SignUpSuccess = () => {
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== 'undefined' ? window.innerWidth : 1920
-  );
+  const [windowWidth, setWindowWidth] = useState();
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', handleResize);
     }
     const originalBackground = document.body.style.background;
     document.body.style.background = `
-    url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.png'),
-    -webkit-linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455),
-    linear-gradient(45deg, #ffff0027 25%, #be34547c, #be3454c2, #BE3455)
+      url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.png'),
+      -webkit-linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455),
+      linear-gradient(45deg, #ffff0027 25%, #be34547c, #be3454c2, #BE3455)
     `;
 
     return () => {

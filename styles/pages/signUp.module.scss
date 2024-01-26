@@ -10,9 +10,8 @@
         margin-left: 20px;
 
         @media (max-width: 1220px) {
-            margin-right: 100px;
-
             margin-top: 85px;
+            
         }
         .target-paragraph-1 {
             color: #BE3455;
@@ -38,7 +37,7 @@
             }
         }
         @media (max-width: 1220px) {
-            width: 645px;
+            width: 708.11px;
         }
         
         .target-paragraph-2 {
@@ -73,7 +72,7 @@
                         border-radius: 7.784px;
                         background: var(--white-gradient, linear-gradient(90deg, #FFF 0.89%, rgba(252, 252, 252, 0.90) 99.89%));
                         @media (max-width: 1500px) {
-                            max-width: 610px;
+                            max-width: 675px;
                         }
                     }
                 }
@@ -100,7 +99,7 @@
             max-width: 272px;
             max-height: 370px;
             position: absolute;
-            margin-left: 310px;
+            margin-left: 460px;
             margin-top: 155px;
         }
     }    

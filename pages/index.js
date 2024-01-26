@@ -17,10 +17,9 @@ import grid_2_tablet from "public/assets/images/grid_2_tablet.png";
 import Layout from 'components/Layout';
 
 const LandingPage = () => {
-    const [windowWidth, setWindowWidth] = useState(
-        typeof window !== 'undefined' ? window.innerWidth : 1920
-      );
+    const [windowWidth, setWindowWidth] = useState();
     useEffect(() => {
+        setWindowWidth(window.innerWidth);
         if (typeof window !== 'undefined') {
             window.addEventListener('resize', handleResize);
           }
