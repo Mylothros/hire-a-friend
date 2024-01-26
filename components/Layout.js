@@ -11,6 +11,7 @@ const Layout = ({ children, title, description, ogTitle, ogDescription }) => {
   return (
     <div className={`fade-in ${fadeIn ? 'fade-in-entered' : ''}`}>
       <Head>
+      <html lang="en" />
       <title>{title || 'Hire A Friend'}</title>
         <meta name="description" content={description || "A page to make new friends"} key="desc" />
         <meta property="og:title" content={ogTitle || "Hire A Friend"} />
