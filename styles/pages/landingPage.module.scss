@@ -18,12 +18,9 @@
             margin-top: 0px;
         }
         .grid-item {
-            margin-left: 20px;
-            margin-right: 20px;
             overflow: hidden;
             @media (max-width: 1220px) {
                 margin-top: 85px;
-                margin-left: 0px;
                 display: inline-block;
             }
         }
@@ -62,7 +59,6 @@
         .image {
             display: flex;
             align-items: center;
-            margin-right: 20px;
             margin-left: auto;
             justify-content: center;
             max-width: 615px;
@@ -70,7 +66,7 @@
             @media (max-width: 1500px) {
                 max-width: 463.495px;
                 max-height: 590.333px;
-                margin-left: 0px;
+
             }
             @media (max-width: 1220px) {
                 max-width: 694.495px;
@@ -103,10 +99,8 @@
         gap: 20px;
         
         .grid-item {
-            margin-left: 20px;
             @media (max-width: 1220px) {
                 max-width: 370px;
-                margin-left: 0px;
             }
         }
         @media (max-width: 1220px) {
@@ -166,14 +160,12 @@
             justify-content: center;
             align-items: center;
             margin-top: 60px;
-            margin-right: 20px;
             margin-left: auto;
             max-width:  728px;
             max-height: 732px;
             @media (max-width: 1500px) {
                 max-width: 604px;
                 max-height: 607px;
-                margin-left: 0px;
             }
             @media (max-width: 1220px) {
                 margin-top: 250px;
