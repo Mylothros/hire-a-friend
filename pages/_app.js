@@ -1,9 +1,13 @@
 // _app.js
 import '../styles/global.scss';
+import Head from 'next/head';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
+     <Head>
+        <html lang="en" />
+      </Head>
       <style global jsx>{`
        body {
         font-family: 'Unbounded';            
