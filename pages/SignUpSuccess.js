@@ -10,7 +10,7 @@ import sign_up from "../public/assets/images/sign_up_success.png";
 
 const SignUpSuccess = () => {
   const [windowWidth, setWindowWidth] = useState(
-    typeof window !== 'undefined' ? window.innerWidth : 0
+    typeof window !== 'undefined' ? window.innerWidth : 1920
   );
   useEffect(() => {
     if (typeof window !== 'undefined') {
