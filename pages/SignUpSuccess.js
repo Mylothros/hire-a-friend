@@ -45,12 +45,12 @@ const SignUpSuccess = () => {
               <span>Your pre-registration is <br/> complete.<br/></span>
               <span>You will recieve a notification when the project<br/>starts<br/></span>
           </p>
-          {windowWidth > 1220 ? <Button slot4="Go to Homepage" />  : null} 
+          {windowWidth > 1280 ? <Button slot4="Go to Homepage" />  : null} 
         </div>
         <div className={styles['image-area-2']}>
           <Image src={sign_up} className={styles['img']}  alt="Landing Image" />
         </div>
-        {windowWidth <= 1220 ? <Button slot4="Go to Homepage" />  : null} 
+        {windowWidth <= 1280 ? <Button slot4="Go to Homepage" />  : null} 
       </div>
     </Layout>
   );

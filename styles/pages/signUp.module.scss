@@ -6,7 +6,7 @@
     background: url('../../public/assets/images/noise.png');
     .area-1 {
         margin-top: 120px;
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             margin-top: 85px;
             
         }
@@ -29,11 +29,11 @@
                     font-weight: 800;
                 }
             }
-            @media (max-width: 1220px) {
+            @media (max-width: 1280px) {
                 max-width: 390px;
             }
         }
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             width: 708.11px;
         }
         
@@ -92,12 +92,12 @@
             max-width: 450px;
             max-height: 613px;   
         }
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             max-width: 272px;
             max-height: 370px;
             position: absolute;
-            margin-left: 460px;
-            margin-top: 155px;
+            margin-left: 430px;
+            margin-top: 100px;
         }
     }    
     @media (max-width: 1500px) {

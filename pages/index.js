@@ -11,8 +11,10 @@ import Card from 'components/Card.js';
 import styles from 'styles/pages/landingPage.module.scss';
 import grid_1_image from "public/assets/images/grid_1.png";
 import grid_1_tablet from "public/assets/images/grid_1_tablet.png";
+import grid_1_phone from "public/assets/images/grid_1_phone.png";
 import grid_2_image from "public/assets/images/grid_2.png";
 import grid_2_tablet from "public/assets/images/grid_2_tablet.png";
+import grid_2_phone from "public/assets/images/grid_2_phone.png";
 
 import Layout from 'components/Layout';
 
@@ -79,7 +81,15 @@ const LandingPage = () => {
                     <Button slot1="Sign up for free"></Button>
                 </div>
                 <div className={styles['image']}>
-                    <Image src={windowWidth > 1220 ? grid_1_image : grid_1_tablet} className={styles['img']} alt="Landing Image" />
+                    <Image 
+                        src={windowWidth > 1280 ? (
+                            grid_1_image
+                        ) : windowWidth <= 1280 && windowWidth > 800 ? (
+                            grid_1_tablet
+                        ) : (
+                            grid_1_phone
+                        )} 
+                        className={styles['img']} alt="Landing Image" />
                 </div>
             </div>
 
@@ -92,31 +102,40 @@ const LandingPage = () => {
                     <div className={styles['target-paragraph-2']}>
                         <div className={styles['target-paragraph-2-list']}>
                             <div>
-                            <Circle />
+                            {windowWidth > 800 &&<Circle />}
+                            
                         </div><span>Platform  for buying or selling services. From <div>private piano lessons to hang-out buddy.</div></span>
                         </div>
                   
                         <div className={styles['target-paragraph-2-list']}>
                         <div>
-                            <Circle />
+                        {windowWidth > 800 &&<Circle />}
                         </div><span>Possibility to use your skills and make  money doing<div> what you love.</div></span>
                         </div>
               
                         <div className={styles['target-paragraph-2-list']}>
                         <div>
-                            <Circle />
+                        {windowWidth > 800 &&<Circle />}
                         </div><span>Possibility to hire a professional and get  <div>services of different categories.</div></span>
                         </div>
                 
                         <div className={styles['target-paragraph-2-list']}>
                         <div>
-                            <Circle />
+                        {windowWidth > 800 &&<Circle />}
                         </div><span>Platform  for  learning and experiencing new  <div>things with a trustworthy professional.</div></span>
                         </div>
                     </div>
                 </div>
                 <div className={styles['image']}>
-                    <Image src={windowWidth > 1220 ? grid_2_image : grid_2_tablet} className={styles['img']} alt="Landing Image" />
+                    <Image 
+                        src={windowWidth > 1280 ? (
+                            grid_2_image
+                        ) : windowWidth <= 1280 && windowWidth > 800 ? (
+                            grid_2_tablet
+                        ) : (
+                            grid_2_phone
+                        )} 
+                        className={styles['img']} alt="Landing Image" />
                 </div>
             </div>
             <div className={styles['area-3']}>
@@ -136,15 +155,22 @@ const LandingPage = () => {
                     <div className={styles['card']}>
                         <p>
                             Connect with us 
-                            <LinkedIn />
-                            <Instagram />
+                            {/* <span className={styles['social']}>
+                                <LinkedIn />
+                                <Instagram />
+                            </span> */}
                             <br/>
-                            <a href="mailto:hireafriend.team@gmail.com">hireafriend.team@gmail.com</a>
+                            <a href="mailto:hireafriend.team@gmail.com">hireafriend.team@gmail.com
+                            </a>
+                            <span className={styles['social']}>
+                                <LinkedIn />
+                                <Instagram />
+                            </span>
                         </p>  
                     </div>
-                </div>
-           
-        </div></Layout>
+                </div>  
+        </div>
+        </Layout>
     );
 }
 

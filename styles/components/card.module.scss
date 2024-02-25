@@ -1,11 +1,8 @@
 .image-container--image {
-   
     background-color: #FFFFFF;
     border-radius: 22.22px;
     position: relative;
-    width: 485.181px;
-    
-   
+    width: 441.181px;
     height: 398px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -16,7 +13,7 @@
         text-align: left;
         padding-top: 25px;
         padding-left: 30px;
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             line-height: 30px;
         }
         > span {
@@ -25,7 +22,7 @@
                 font-size: 20.857px;
                 font-weight: 400;
                 letter-spacing: -0.422px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 15px !important;
                 }
             }
@@ -35,7 +32,7 @@
                 font-size: 37.953px;
                 font-weight: 700;
                 letter-spacing: -0.768px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 27px !important;
                 }
             }
@@ -46,7 +43,7 @@
                 font-weight: 800;
                 line-height: 122%;
                 letter-spacing: -0.384px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 13px !important;
                 }
             }
@@ -61,7 +58,7 @@
         text-align: left;
         padding-top: 25px;
         padding-left: 30px;
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             line-height: 30px;
         }
         > span {
@@ -70,7 +67,7 @@
                 font-size: 20.857px;
                 font-weight: 400;
                 letter-spacing: -0.422px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 13px !important;
                 }
             }
@@ -80,7 +77,7 @@
                 font-size: 37.953px;
                 font-weight: 700;
                 letter-spacing: -0.768px; 
-                 @media (max-width: 1220px) {
+                 @media (max-width: 1280px) {
                     font-size: 27px !important;
                 }
             }
@@ -90,7 +87,7 @@
                 font-size: 37.953px;
                 font-weight: 700;
                 letter-spacing: -0.768px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 27px !important;
                 } 
             }
@@ -101,7 +98,7 @@
                 font-weight: 800;
                 line-height: 122%;
                 letter-spacing: -0.384px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 13px !important;
                 } 
             }
@@ -122,7 +119,7 @@
                 font-size: 20.857px;
                 font-weight: 400;
                 letter-spacing: -0.422px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 15px !important;
                 } 
             }
@@ -132,7 +129,7 @@
                 font-size: 41.714px;
                 font-weight: 700;
                 letter-spacing: -0.768px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 30px !important;
                 }     
             }
@@ -143,7 +140,7 @@
                 font-weight: 700;
                 letter-spacing: -0.768px;   
                 line-height: 1.5;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 30px !important;
                 } 
             }
@@ -153,7 +150,7 @@
                 font-size: 18.976px;
                 font-weight: 800;
                 letter-spacing: -0.384px;
-                @media (max-width: 1220px) {
+                @media (max-width: 1280px) {
                     font-size: 13px !important;
                 } 
             }
@@ -169,7 +166,7 @@
         height: 328.17px;
         border-radius: 20px;
         max-width: 100%;
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             width: 212px !important;
             height: 223px !important;
         }
@@ -182,7 +179,7 @@
         width: 291.867px;
         height: 328.434px;
         border-radius: 20px; max-width: 100%;
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             width: 199px !important;
             height: 224px !important;
         }
@@ -194,7 +191,7 @@
         bottom: 0px;
         width: 320px;
         height: 260px;
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             width: 219px !important;
             height: 200px !important;
         }
@@ -207,9 +204,13 @@
         width: 372px;
         height: 305px;
 
-        @media (max-width: 1220px) {
+        @media (max-width: 1280px) {
             width: 331px;
             height: 271px;
+        }
+        @media (max-width: 800px) {
+            width: 281px;
+            height: 230px;
         }
         & .target-paragraph-1 {
             padding-top: 0px;
@@ -217,14 +218,23 @@
             > span {
                 &:nth-child(1) {   
                     font-size: 17px;
+                    @media (max-width: 800px) {
+                        font-size: 12px !important;
+                    }  
                 }
     
-                &:nth-child(2) {       
+                &:nth-child(2) {    
                     font-size: 32px;
+                    @media (max-width: 800px) {
+                        font-size: 23px !important;
+                    }
                 }
     
                 &:nth-child(3) {       
                     font-size: 16px;
+                    @media (max-width: 800px) {
+                        font-size: 11px !important;
+                    }   
                 }
             }
             
@@ -236,18 +246,30 @@
             > span {
                 &:nth-child(1) { 
                     font-size: 17px;
+                    @media (max-width: 800px) {
+                        font-size: 12px !important;
+                    } 
                 }
     
                 &:nth-child(2), &:nth-child(4) { 
                     font-size: 32px;
+                    @media (max-width: 800px) {
+                        font-size: 23px !important;
+                    } 
                 }
     
                 &:nth-child(3) {
                     font-size: 32px;
+                    @media (max-width: 800px) {
+                        font-size: 23px !important;
+                    } 
                 }
     
                 &:nth-child(5) {
                     font-size: 17px;
+                    @media (max-width: 800px) {
+                        font-size: 11px !important;
+                    }  
                 }
             }
             
@@ -259,18 +281,30 @@
             > span {
                 &:nth-child(1) {
                     font-size: 17px;
+                    @media (max-width: 800px) {
+                        font-size: 12px !important;
+                    }
                 }
     
                 &:nth-child(2) {
-                    font-size: 32px; 
+                    font-size: 32px;
+                    @media (max-width: 800px) {
+                        font-size: 23px !important;
+                    }
                 }
     
                 &:nth-child(3) {
                     font-size: 32px;
+                    @media (max-width: 800px) {
+                        font-size: 23px !important;
+                    }
                 }
     
                 &:nth-child(4), &:nth-child(5), &:nth-child(6) {  
-                    font-size: 17px;  
+                    font-size: 17px;
+                    @media (max-width: 800px) {
+                        font-size: 12px !important;
+                    }
                 }
             }
             
@@ -279,16 +313,28 @@
         .img-1 {
             width: 246.196px;
             height: 259.732px;
+            @media (max-width: 800px) {
+                width: 180px !important;
+                height: 190px !important;
+            }
         }
 
         .img-2 {
             width: 220px;
             height: 228.434px;
+            @media (max-width: 800px) {
+                width: 169px !important;
+                height: 190px !important;
+            }
         }
 
         .img-3 {
             width: 247px;
             height: 214px;
+            @media (max-width: 800px) {
+                width: 150px !important;
+                height: 170px !important;
+            }
         }
     }
 }
