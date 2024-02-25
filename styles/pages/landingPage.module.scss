@@ -364,9 +364,6 @@
             border-radius: 15.706px 15.706px 0px 0px;
             
             p {
-                @media (max-width: 800px) {
-                    margin-top: 10px;
-                }
                 color: #454545;
                 font-family: 'Plus Jakarta Sans';
                 font-size: 25px;
@@ -378,6 +375,8 @@
                 @media (max-width: 800px) {
                     margin-left: 0px;
                     text-align: center;
+                    margin-top: 10px;
+                    font-size: 16px;
                 }
                 .social {
                     display: contents;
