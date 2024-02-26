@@ -212,12 +212,7 @@ workflows:
               only:
                 - develop
                 - staging
-                - master
-      - hold:
-          type: approval
-          requires:
-            - deploy-to-aws-cloudfront
-            
+                - master           
       # - terraform-destroy:
       #     requires:
       #       - hold
