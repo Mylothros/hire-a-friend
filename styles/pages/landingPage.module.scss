@@ -189,15 +189,30 @@
                 }
             }
             @media (max-width: 800px) {
-                > .target-paragraph-2-list {
+                > .target-paragraph-2-list {      
                     @media (max-width: 1280px) {    
                         &:nth-child(1) {   
+                            > span div {
+                                display: contents;
+                            }
                             width: 100%;
                         }
                         &:nth-child(2) {   
+                            > span div {
+                                display: contents;
+                            }
                             width: 100%;
                         }
-                        &:nth-child(4) {   
+                        &:nth-child(3) {   
+                            > span div {
+                                display: contents;
+                            }
+                            width: 100%;
+                        }
+                        &:nth-child(4) {  
+                            > span div {
+                                display: contents;
+                            } 
                             width: 100%;
                         }    
                     }
@@ -263,15 +278,16 @@
 
     // Area 3
     .area-3 {
+        margin-top: 110px;
+        margin-right: auto;
+        margin-left: auto;
         @media (max-width: 1500px) {
             width: 1279px;
         }
         @media (max-width: 800px) {
             width: 350px;
+            margin-top: 50px;
         }  
-        margin-top: 110px;
-        margin-right: auto;
-        margin-left: auto;
         .target-paragraph {
             color: #BE3455;
             text-align: center;

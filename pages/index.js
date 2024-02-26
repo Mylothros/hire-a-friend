@@ -110,9 +110,8 @@ const LandingPage = () => {
                         <div className={styles['target-paragraph-2-list']}>
                         <div>
                         {windowWidth > 800 &&<Circle />}
-                        </div><span>Possibility to use your skills and make  money doing<div> what you love.</div></span>
+                        </div><span>Possibility to use your skills and make money doing<div> what you love.</div></span>
                         </div>
-              
                         <div className={styles['target-paragraph-2-list']}>
                         <div>
                         {windowWidth > 800 &&<Circle />}
