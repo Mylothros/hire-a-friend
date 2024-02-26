@@ -9,6 +9,9 @@
     }
     cursor: pointer;
     & .link {
+        display: flex;
+        width: 242px;
+        height: 59px;
         text-decoration: none;
     } 
 }
