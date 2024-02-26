@@ -76,7 +76,7 @@ const LandingPage = () => {
                     <p className={styles['target-paragraph-2']}>
                         <span>Join as </span>
                         <span>a professional or as client.</span>
-                        <span>Earn money, <br/>find new connections and experience.</span>
+                        <span>Earn money, {windowWidth <= 800 ? <>find new connections and experience.</> : <><br/>find new connections and experience.</>}</span>
                     </p>
                     <Button slot1="Sign up for free"></Button>
                 </div>

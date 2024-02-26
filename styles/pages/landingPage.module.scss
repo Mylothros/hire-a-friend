@@ -293,8 +293,8 @@
             width: 1279px;
         }
         @media (max-width: 800px) {
-            width: 350px;
-            margin-top: 50px;
+            width: 330px;
+            margin-top: 50px;           
         }
         @media (max-width: 370px) {
             width: 300px;
@@ -308,7 +308,7 @@
             line-height: 122%;
             letter-spacing: -0.912px;
             @media (max-width: 800px) {
-                font-size: 32px;      
+                font-size: 32px;           
             }
             > span {
                 &:nth-child(2) {       

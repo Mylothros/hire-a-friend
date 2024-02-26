@@ -9,17 +9,22 @@ import Layout from 'components/Layout';
 
 import styles from '../styles/pages/signUp.module.scss';
 import sign_up from "../public/assets/images/sign_up.png";
-
+import sign_up_phone from "public/assets/images/sign_up_phone.png";
 const signup = () => {
 
   const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
   const [dataSubmited, setDataSubmited] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [windowWidth, setWindowWidth] = useState();
 
   const router = useRouter();
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    if (typeof window !== 'undefined') {
+        window.addEventListener('resize', handleResize);
+      }
     const originalBackground = document.body.style.background;
   
     document.body.style.background = `
@@ -30,9 +35,12 @@ const signup = () => {
   
     return () => {
       document.body.style.background = originalBackground;
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
-  
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
   const isValidEmail = (email) => {
     return /\S+@\S+\.\S+/.test(email);
   }
@@ -92,7 +100,7 @@ const signup = () => {
                     value={email}
                     onChange={handleChange}
                   />
-                  {error && <h3 style={{ color: 'red', fontSize: '20px'}}>{error}</h3>}
+                  {error && <h3 style={{ color: 'red', fontSize: windowWidth <= 800 ? '16px' : '20px'}}>{error}</h3>}
                 </span> 
             </p>
             <div >
@@ -100,7 +108,7 @@ const signup = () => {
             </div>
             </div>
           <div className={styles['image-area-2']}>
-            <Image src={sign_up} className={styles['img']}  alt="Landing Image" />
+            <Image src={windowWidth > 800 ? sign_up : sign_up_phone} className={styles['img']} alt="Landing Image" />
           </div>
         </div>
     </form>

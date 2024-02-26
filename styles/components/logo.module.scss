@@ -7,11 +7,20 @@
     @media (max-width: 1500px) {           
         margin-bottom: 58px;
     }
+    @media (max-width: 800px) {           
+        width: 100px;
+        height: 24.58px;
+        margin-bottom: 38px;
+    }
     cursor: pointer;
     & .link {
         display: flex;
         width: 242px;
         height: 59px;
         text-decoration: none;
+        @media (max-width: 800px) {           
+            width: 100px;
+            height: 24.58px;
+        }
     } 
 }
