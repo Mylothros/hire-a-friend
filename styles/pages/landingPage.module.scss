@@ -321,9 +321,9 @@
             font-weight: 600;   
             color: #454545;
             @media (max-width: 800px) {
-                font-size: 18px;      
-            }
-            
+                font-size: 18px;    
+                letter-spacing: -0.912px; 
+            }           
         }
         
         .image-container {
