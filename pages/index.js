@@ -142,8 +142,8 @@ const LandingPage = () => {
                     <p className={styles['target-paragraph']}>
                         <span>How do you get </span>
                         <span>started with us.<br/></span>
-                        <span>You can create account for yourself just in 3 simple steps</span>
-                    </p>
+                       
+                    </p> <p>You can create account for yourself just in 3 simple steps</p>
                         <div className={styles['image-container']}>
                             <Card slot1={card1Slot}/>
                             <Card slot2={card2Slot}/>
