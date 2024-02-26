@@ -8,7 +8,6 @@ const LinkedIn = () => {
             window.addEventListener('resize', handleResize);
           }
         return () => {
-            document.body.style.background = originalBackground;
             window.removeEventListener('resize', handleResize);
           };
       }, []);
