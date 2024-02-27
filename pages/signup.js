@@ -103,7 +103,7 @@ const signup = () => {
                   {error && <h3 style={{ color: 'red', fontSize: windowWidth <= 800 ? '16px' : '20px'}}>{error}</h3>}
                 </span> 
             </p>
-            <div >
+            <div>
               <Button slot3="Sign up" dataSubmited={dataSubmited} />  
             </div>
             </div>
