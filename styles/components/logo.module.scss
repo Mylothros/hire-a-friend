@@ -1,26 +1,26 @@
 .top-left-box {
+  width: 242px;
+  height: 59.5px;
+  background: #be3455;
+  border-radius: 12.099px;
+  margin-bottom: 98px;
+  @media (max-width: 1500px) {
+    margin-bottom: 58px;
+  }
+  @media (max-width: 800px) {
+    width: 100px;
+    height: 35px;
+    margin-bottom: 38px;
+  }
+  cursor: pointer;
+  & .link {
+    display: flex;
     width: 242px;
-    height: 59.5px;
-    background: #BE3455;
-    border-radius: 12.099px;
-    margin-bottom: 98px;
-    @media (max-width: 1500px) {           
-        margin-bottom: 58px;
+    height: 59px;
+    text-decoration: none;
+    @media (max-width: 800px) {
+      width: 100px;
+      height: 35px;
     }
-    @media (max-width: 800px) {           
-        width: 100px;
-        height: 35px;
-        margin-bottom: 38px;
-    }
-    cursor: pointer;
-    & .link {
-        display: flex;
-        width: 242px;
-        height: 59px;
-        text-decoration: none;
-        @media (max-width: 800px) {           
-            width: 100px;
-            height: 35px;
-        }
-    } 
+  }
 }
