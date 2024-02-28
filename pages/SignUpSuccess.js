@@ -43,7 +43,7 @@ const SignUpSuccess = () => {
           <Logo />
           <p className={styles['target-paragraph-1']}>
               <span>Your pre-{windowWidth <= 800 ? <><br/></> : null}registration is <br/> complete.<br/></span>
-              <span>You will recieve a notification when {windowWidth <= 800 ? <><br/></> : null}the project{windowWidth <= 800 ? null : <><br/></>}starts<br/></span>
+              <span>You will recieve a notification when {windowWidth <= 800 ? <><br/></> : null}the project{windowWidth <= 800 ? null : <><br/></>} starts.<br/></span>
           </p>
           {windowWidth > 1280 ? <Button slot4="Go to Homepage" />  : null} 
         </div>

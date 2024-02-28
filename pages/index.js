@@ -75,20 +75,18 @@ const LandingPage = () => {
                     </p>
                     <p className={styles['target-paragraph-2']}>
                         <span>Join as </span>
-                        <span>a professional or as client.</span>
+                        <span>a professional or as a client.</span>
                         <span>Earn money, {windowWidth <= 800 ? <>find new connections and experience.</> : <><br/>find new connections and experience.</>}</span>
                     </p>
                     <Button slot1="Sign up for free"></Button>
                 </div>
                 <div className={styles['image']}>
                     <Image 
-                        src={windowWidth > 1280 ? (
-                            grid_1_image
-                        ) : windowWidth <= 1280 && windowWidth > 800 ? (
-                            grid_1_tablet
-                        ) : (
-                            grid_1_phone
-                        )} 
+                        src={windowWidth > 1280 
+                            ? grid_1_image 
+                            : windowWidth <= 1280 && windowWidth > 800 
+                                ? grid_1_tablet 
+                                : grid_1_phone} 
                         className={styles['img']} alt="Landing Image" />
                 </div>
             </div>
@@ -137,13 +135,12 @@ const LandingPage = () => {
                         className={styles['img']} alt="Landing Image" />
                 </div>
             </div>
-            <div className={styles['area-3']}>
-                
+            <div className={styles['area-3']}>        
                     <p className={styles['target-paragraph']}>
                         <span>How do you get </span>
-                        <span>started with us.<br/></span>
-                       
-                    </p> <p>You can create account for yourself just in 3 simple steps</p>
+                        <span>started with us.<br/></span>         
+                    </p> 
+                    <p>You can create account for yourself just in 3 simple steps</p>
                         <div className={styles['image-container']}>
                             <Card slot1={card1Slot}/>
                             <Card slot2={card2Slot}/>

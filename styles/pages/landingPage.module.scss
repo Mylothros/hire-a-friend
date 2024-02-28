@@ -6,7 +6,7 @@
     @media (max-width: 1280px) {
         display: block;
     }
-    .area-1 {        
+    .area-1 {              
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 120px;
@@ -14,11 +14,14 @@
         margin-left: auto;
         gap: 30px;
         @media (max-width: 1500px) {
+            display: inline-flex;
             width: 1279px;
         }
         @media (max-width: 1280px) {
             width: 710px;
             margin-top: 0px;
+            display: block;
+            gap: 0px !important;
         }
         @media (max-width: 800px) {
             width: 350px;
@@ -27,10 +30,6 @@
             width: 300px;
         }
         .grid-item {
-            @media (max-width: 800px) {
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-            }
             margin-left: 54px;
             overflow: hidden;
             @media (max-width: 1280px) {
@@ -38,15 +37,17 @@
                 margin-left: 0px;
                 display: inline-block;
             }
+            @media (max-width: 800px) {
+                margin-left: 10px !important;
+                margin-right: 10px !important;
+            }
         }
-
         .target-paragraph-1 {
             font-size: 48px;
             font-weight: 500;
             line-height: 122%;
             letter-spacing: -0.912px;
             text-align: left;
-
             @media (max-width: 800px) {
                 font-size: 32px;
             }
@@ -57,7 +58,6 @@
                 }
             }       
         }
-
         .target-paragraph-2 {
             font-family: 'Plus Jakarta Sans';
             text-align: left;
@@ -78,20 +78,18 @@
 
         .image {
             margin-right: 54px;
-    
             display: flex;
             align-items: center;
             margin-left: auto;
             justify-content: center;
-            
+            @media (max-width: 1500px) {           
+                align-items: unset;
+            }
             @media (max-width: 1280px) {
                 margin-top: 32px;     
                 display: inline-block;
                 align-items: center;
                 margin-right: 0px;
-            }
-            @media (max-width: 1500px) {           
-                align-items: unset;
             }
             .img {
                 @media (max-width: 1500px) {
@@ -110,37 +108,30 @@
                 height: auto;
             }
         }
-        @media (max-width: 1500px) {
-            display: inline-flex;
-        }
-        @media (max-width: 1280px) {
-            display: block;
-            gap: 0px !important;
-        }
-    }
-
-    
+    } 
     .area-2 {
-        @media (max-width: 800px) {
-            justify-content: center;          
-        }
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 50px;
         margin-right: auto;
         margin-left: auto;
         @media (max-width: 1500px) {
+            display: inline-flex;
             width: 1279px;
         }
         @media (max-width: 1280px) {
             width: 710px;
+            .image-tablet {
+                display: inline-flex;
+            }
         }   
         @media (max-width: 800px) {
-            width: 350px;
+            justify-content: center;  
+              width: 350px;   
         }
         @media (max-width: 370px) {
             width: 300px;
-        } 
+        }
         .grid-item {
             margin-left: 54px;
             @media (max-width: 1280px) {
@@ -151,11 +142,6 @@
                 margin-left: 10px !important;
                 margin-right: 10px !important;
             } 
-        }
-        @media (max-width: 1280px) {        
-            .image-tablet {
-                display: inline-flex;
-            }
         }
         .target-paragraph-1 {
             font-family: 'Unbounded';
@@ -173,16 +159,12 @@
                 }
             }       
         }
-
         .target-paragraph-2 {     
             color: #454545;
             font-family: 'Plus Jakarta Sans Light';
             font-size: 28px;
             font-weight: 700;
             text-align: left;
-            @media (max-width: 800px) {
-                font-size: 16px;
-            } 
             > .target-paragraph-2-list {
                 @media (max-width: 1280px) {    
                     &:nth-child(1) {   
@@ -197,6 +179,7 @@
                 }
             }
             @media (max-width: 800px) {
+                font-size: 16px;
                 > .target-paragraph-2-list {      
                     @media (max-width: 1280px) {    
                         &:nth-child(1) {   
@@ -229,7 +212,6 @@
             .target-paragraph-2-list {
                 display: flex;
             }
-
             > .target-paragraph-2-list span {
                 vertical-align: top;
                 margin-bottom: 50px;
@@ -240,7 +222,6 @@
                 } 
             }
         }
-
         .image {
             margin-right: 54px;
             display: block;
@@ -277,10 +258,7 @@
                 max-height: 690.333px;
                 height: auto;        
             }
-        }
-        @media (max-width: 1500px) {
-            display: inline-flex;
-        }     
+        }  
     }
 
     // Area 3
@@ -347,7 +325,6 @@
             gap: 44.65px;
         }       
     }
-
     @media (max-width: 1280px) {
         .image-container {
             grid-template-columns: 1fr 1fr !important;
@@ -359,7 +336,7 @@
         }
     }
 
-    @media (max-width: 1020px) {
+    @media (max-width: 800px) {
         .image-container {
             display: inline-block !important;
         }
@@ -376,8 +353,7 @@
         margin-top: 190px;
         margin-right: auto;
         margin-left: auto;
-        .card {
-            
+        .card {        
             @media (max-width: 1500px) {
                 margin-left: -20px
             }
@@ -387,8 +363,7 @@
             background-color: rgba(255, 255, 255, 0.5);
             height: 137px;
             border: 1.3px solid var(--stroke-gradient, #FFF);
-            border-radius: 15.706px 15.706px 0px 0px;
-            
+            border-radius: 15.706px 15.706px 0px 0px;      
             p {
                 color: #454545;
                 font-family: 'Plus Jakarta Sans';

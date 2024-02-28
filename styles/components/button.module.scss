@@ -14,12 +14,10 @@
     margin-top: 9%;
     }
 }
-
 @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
-
 .button-1 {
     margin-top: 56px;
     display: flex;
@@ -30,6 +28,24 @@
         margin-top: 36px;
     }
     .arrow-button {
+        max-width: 670px;
+        width: 100%;
+        font-family: 'Plus Jakarta Sans Light';
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 150%;
+        border-radius: 300px;
+        background: #BE3455;
+        color: white;
+        padding: 20px 0px 20px 0px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        background-image: url("../../public/assets/images/arrow.png");
+        background-size: 35px;
+        background-repeat: no-repeat;
+        background-position: bottom 20px left 78%;
+        transition: color 0.5s ease;
         &--no-arrow {
             max-height: 72px;
             justify-content: center;
@@ -45,25 +61,6 @@
                 height: 52px;
             }
         }
-        max-width: 670px;
-        width: 100%;
-        font-family: 'Plus Jakarta Sans Light';
-        font-size: 28px;
-        font-weight: 600;
-        line-height: 150%;
-        border-radius: 300px;
-        background: #BE3455;
-        color: white;
-        padding: 20px 0px 20px 0px;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-        
-        background-image: url("../../public/assets/images/arrow.png");
-        background-size: 35px;
-        background-repeat: no-repeat;
-        background-position: bottom 20px left 78%;
-        transition: color 0.5s ease;
         @media (max-width: 1500px) {
             max-width: 644px;
             padding: 20px 0px 20px 0px;
@@ -87,7 +84,6 @@
         }
     }
 }
-
 .centerized-button {
     display:flex;
     margin-right: 0px;
