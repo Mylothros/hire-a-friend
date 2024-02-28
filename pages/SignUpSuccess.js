@@ -35,7 +35,7 @@ const SignUpSuccess = () => {
   return (
     <Layout
       title="Signed up"
-      description="You will recieve a notification when the project
+      description="You will receive a notification when the project
       starts."
       ogTitle="Signing up was successful"
       ogDescription="You will recieve a notification when the project
