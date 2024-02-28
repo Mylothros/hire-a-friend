@@ -24,9 +24,7 @@ const Layout = ({ children, title, description, ogTitle, ogDescription }) => {
         />
         <meta
           property="og:image"
-          content={
-            "http://test-bucket-hire.s3-website-us-east-1.amazonaws.com/" +
-            "assets/images/grid_1.png"
+          content={"https://d3pc0hdqierc2c.cloudfront.net/assets/images/grid_1.png"
           }
         />
         {/* <meta property="og:image" content="http://test-bucket-hire.s3-website-us-east-1.amazonaws.com/assets/images/grid_1.png" /> */}
