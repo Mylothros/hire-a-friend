@@ -3,7 +3,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   max-width: 100%;
   text-align: center;
-  @media (max-width: 1280px) {
+  @media (max-width: 1296px) {
     display: block;
   }
   .area-1 {
@@ -17,7 +17,7 @@
       display: inline-flex;
       width: 1279px;
     }
-    @media (max-width: 1280px) {
+    @media (max-width: 1296px) {
       width: 710px;
       margin-top: 0px;
       display: block;
@@ -32,7 +32,7 @@
     .grid-item {
       margin-left: 54px;
       overflow: hidden;
-      @media (max-width: 1280px) {
+      @media (max-width: 1296px) {
         margin-top: 85px;
         margin-left: 0px;
         display: inline-block;
@@ -85,7 +85,7 @@
       @media (max-width: 1500px) {
         align-items: unset;
       }
-      @media (max-width: 1280px) {
+      @media (max-width: 1296px) {
         margin-top: 32px;
         display: inline-block;
         align-items: center;
@@ -96,7 +96,7 @@
           max-width: 463.495px;
           max-height: 520.333px;
         }
-        @media (max-width: 1280px) {
+        @media (max-width: 1296px) {
           max-width: 694.495px;
           max-height: 483.333px;
         }
@@ -119,7 +119,7 @@
       display: inline-flex;
       width: 1279px;
     }
-    @media (max-width: 1280px) {
+    @media (max-width: 1296px) {
       width: 710px;
       .image-tablet {
         display: inline-flex;
@@ -134,7 +134,7 @@
     }
     .grid-item {
       margin-left: 54px;
-      @media (max-width: 1280px) {
+      @media (max-width: 1296px) {
         max-width: 370px;
         margin-left: 0px;
       }
@@ -166,7 +166,7 @@
       font-weight: 700;
       text-align: left;
       > .target-paragraph-2-list {
-        @media (max-width: 1280px) {
+        @media (max-width: 1296px) {
           &:nth-child(1) {
             width: 650px;
           }
@@ -181,7 +181,7 @@
       @media (max-width: 800px) {
         font-size: 16px;
         > .target-paragraph-2-list {
-          @media (max-width: 1280px) {
+          @media (max-width: 1296px) {
             &:nth-child(1) {
               > span div {
                 display: contents;
@@ -231,7 +231,7 @@
       margin-left: auto;
       max-width: 728px;
       max-height: 732px;
-      @media (max-width: 1280px) {
+      @media (max-width: 1296px) {
         margin-top: 380px;
         margin-right: 0px;
         max-width: 311px;
@@ -250,7 +250,7 @@
           max-width: 463.495px;
           max-height: 607.333px;
         }
-        @media (max-width: 1280px) {
+        @media (max-width: 1296px) {
           max-width: 311px;
           max-height: 313px;
         }
@@ -320,12 +320,12 @@
         margin-left: 0px;
       }
     }
-    @media (max-width: 1280px) {
+    @media (max-width: 1296px) {
       max-width: 500px;
       gap: 44.65px;
     }
   }
-  @media (max-width: 1280px) {
+  @media (max-width: 1296px) {
     .image-container {
       grid-template-columns: 1fr 1fr !important;
 
