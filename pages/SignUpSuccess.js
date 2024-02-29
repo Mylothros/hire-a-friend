@@ -38,7 +38,7 @@ const SignUpSuccess = () => {
       description="You will receive a notification when the project
       starts."
       ogTitle="Signing up was successful"
-      ogDescription="You will recieve a notification when the project
+      ogDescription="You will receive a notification when the project
       starts."
     >
       <div className={styles["container"]}>
