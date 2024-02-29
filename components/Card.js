@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 
 import styles from "styles/components/card.module.scss";
-import product_1 from "public/assets/images/product_1.png";
-import product_2 from "public/assets/images/product_2.png";
-import product_3 from "public/assets/images/product_3.png";
+import product_1 from "public/assets/images/product_1.webp";
+import product_2 from "public/assets/images/product_2.webp";
+import product_3 from "public/assets/images/product_3.webp";
 
 const Card = ({ slot1, slot2, slot3 }) => {
   return (

@@ -8,8 +8,8 @@ import Button from "components/Button.js";
 import Layout from "components/Layout";
 
 import styles from "../styles/pages/signUp.module.scss";
-import sign_up from "../public/assets/images/sign_up.png";
-import sign_up_phone from "public/assets/images/sign_up_phone.png";
+import sign_up from "../public/assets/images/sign_up.webp";
+import sign_up_phone from "public/assets/images/sign_up_phone.webp";
 const signup = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
@@ -27,7 +27,7 @@ const signup = () => {
     const originalBackground = document.body.style.background;
 
     document.body.style.background = `
-      url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.png'),
+      url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.webp'),
       -webkit-linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455),
       linear-gradient(45deg, #ffff0027 25%, #be34547c, #be3454c2, #BE3455)
     `;

@@ -9,12 +9,12 @@ import Button from "components/Button.js";
 import Card from "components/Card.js";
 
 import styles from "styles/pages/landingPage.module.scss";
-import grid_1_image from "public/assets/images/grid_1.png";
-import grid_1_tablet from "public/assets/images/grid_1_tablet.png";
-import grid_1_phone from "public/assets/images/grid_1_phone.png";
-import grid_2_image from "public/assets/images/grid_2.png";
-import grid_2_tablet from "public/assets/images/grid_2_tablet.png";
-import grid_2_phone from "public/assets/images/grid_2_phone.png";
+import grid_1_image from "public/assets/images/grid_1.webp";
+import grid_1_tablet from "public/assets/images/grid_1_tablet.webp";
+import grid_1_phone from "public/assets/images/grid_1_phone.webp";
+import grid_2_image from "public/assets/images/grid_2.webp";
+import grid_2_tablet from "public/assets/images/grid_2_tablet.webp";
+import grid_2_phone from "public/assets/images/grid_2_phone.webp";
 
 import Layout from "components/Layout";
 
@@ -27,7 +27,7 @@ const LandingPage = () => {
     }
     const originalBackground = document.body.style.background;
     document.body.style.background = `
-          url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.png'),
+          url('https://d3pc0hdqierc2c.cloudfront.net/assets/images/noise.webp'),
           -webkit-linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455),
           linear-gradient(45deg, #be345481, #ffff003b, #be34547c, #be3454c2, #BE3455)
         `;
