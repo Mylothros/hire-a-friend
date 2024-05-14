@@ -1,135 +1,154 @@
-.sign-up-area-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 100%;
-    margin: 0px auto;
-    text-align: center;
-
-    .sign-up-top-left-box {
-        width: 130px;
-        background: #BE3455;
-        color: #F4E41E;
-        border-radius: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-weight: 900;
-        margin-bottom: 60px;
-        text-align: center;
-        cursor: pointer;
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 250px;
+  @media (max-width: 1500px) {
+    gap: 0px;
+  }
+  .area-1 {
+    margin-top: 120px;
+    margin-bottom: 85px;
+    @media (max-width: 1296px) {
+      margin-top: 85px;
+      width: 708.11px;
     }
-
-    .sign-up-highlighted-word-grid-1 {
-        font-size: 40px;
-        font-weight: bold;;
-        display: contents;
-        color: #BE3455;
-        padding: 0 5px;
+    @media (max-width: 800px) {
+      width: 338px;
+      margin-left: 15px;
+      margin-right: 15px;
     }
-
-    p {
-        text-align: left;
-        font-size: 20px;
+    @media (max-width: 370px) {
+      width: 250px;
+      position: fixed;
     }
-    
-    .sign-up-grid-1-button {
-        justify-content: left;
-        display: flex;
-    }
+    .target-paragraph-1 {
+      color: #be3455;
+      text-align: left;
+      font-family: "Unbounded";
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 122%;
+      @media (max-width: 800px) {
+        font-size: 32px;
+        width: 188px;
+      }
+      @media (max-width: 370px) {
+        width: 168px;
+      }
+      > span {
+        &:nth-child(1) {
+          color: #be3455;
+        }
 
-    button {
-        font-size: 20px;
-        border-radius: 20px;
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        background: #BE3455;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        margin-top: 30px;
-        cursor: pointer;
-
-        &:hover {
-            color: white;
-            opacity: 0.5;
+        &:nth-child(2) {
+          color: #fff;
+          font-family: "Plus Jakarta Sans";
+          font-size: 32px;
+          font-weight: 800;
+          @media (max-width: 800px) {
+            font-size: 16px;
+            display: block;
+            width: 330px;
           }
-    }
-
-    .sign-up-arrow-button {
-        background-image: url("../../public/assets/images/arrow.png");
-        background-size: 25px;
-        background-repeat: no-repeat;
-        background-position: bottom 9px right 50px;        
-    }
-
-    .sign-up-grid-item-image {  
-        display: flex;
-        justify-content: right;
-        img {
-            height: 70%;
         }
+      }
+      @media (max-width: 1296px) {
+        max-width: 390px;
+      }
     }
-
-    // @media screen and (max-width: 1300px) {
-    //     .sign-up-grid-item-image {  
-    //         display: flex;
-    //         margin-left: 100px;
-    //         margin-top: 50px;
-    //     }
-    //   }
-
-    input {
-        border: none;
-        border-radius: 10px;
-        padding-right: 40px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-    }
-    
-    @media screen and (max-width: 1200px) {
-        .sign-up-arrow-button {
-            background-image: none;  
+    .target-paragraph-2 {
+      color: #be3455;
+      text-align: left;
+      font-family: "Unbounded";
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 122%;
+      @media (max-width: 800px) {
+        font-size: initial;
+        line-height: 302%;
+      }
+      > span {
+        &:nth-child(1) {
+          color: #fff;
+          font-family: "Plus Jakarta Sans";
+          font-size: 32px;
+          font-weight: 800;
+          @media (max-width: 800px) {
+            font-size: 22px;
+          }
         }
-    }
-}
 
-
-@media screen and (max-width: 1000px) {
-    .sign-up-area-1 {
-        display: grid;
-        grid-template-rows: 0.5fr 0.5fr;
-        grid-gap: 40px;
-        justify-content: center;
-        
-        p {
-            text-align: center !important;
-            font-size: 20px;
+        &:nth-child(2) {
+          > input {
+            position: relative;
+            border: none;
+            color: #696969;
+            max-width: 632px;
+            max-height: 100%;
+            padding-left: 32px;
+            width: 100%;
+            height: 100px;
+            font-family: "Plus Jakarta Sans";
+            font-size: 22px;
+            font-weight: 800;
+            border-radius: 7.784px;
+            background: var(
+              --white-gradient,
+              linear-gradient(
+                90deg,
+                #fff 0.89%,
+                rgba(252, 252, 252, 0.9) 99.89%
+              )
+            );
+            @media (max-width: 1500px) {
+              max-width: 675px;
+            }
+            @media (max-width: 800px) {
+              max-width: 305px;
+              font-size: 16px;
+              height: 45px;
+            }
+            @media (max-width: 370px) {
+              width: 215px;
+            }
+          }
         }
+      }
     }
-
-    .sign-up-grid-item-image {  
-        justify-content: center !important;
+  }
+  .image-area-2 {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 540px;
+    max-height: 734px;
+    .img {
+      max-width: 100%;
+      height: auto;
     }
-
-    .sign-up-grid-1-button {
-        justify-content: center !important;
+    @media (max-width: 1500px) {
+      max-width: 450px;
+      max-height: 613px;
     }
-
-    .sign-up-grid-item {
-        text-align: center;
+    @media (max-width: 1296px) {
+      max-width: 272px;
+      max-height: 370px;
+      position: absolute;
+      margin-left: 430px;
+      margin-top: 80px;
     }
-    
-    .sign-up-success {
-        .sign-up-top-left-box {
-            margin-left: 20px; 
-        }
+    @media (max-width: 800px) {
+      width: 156px;
+      height: 213px;
+      position: absolute;
+      margin-left: 180px;
+      margin-top: 80px;
     }
-    .sign-up-grid-item-image {  
-        img {
-            width: 40%;
-            height: 90% !important;
-        }
+    @media (max-width: 370px) {
+      width: 126px;
+      margin-left: 110px;
     }
-    
+  }
 }

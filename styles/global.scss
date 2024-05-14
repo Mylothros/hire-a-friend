@@ -1,36 +1,16 @@
-@import './fonts/fonts.scss';
-
-body {
-  margin: 0px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #FFFFFF;
-  
-  // linear-gradient(to top right, #ffff0054, #ffff0054 25%, #be34547c 50%, #BE3455 75%);
-  // background-repeat: no-repeat;
-  
+@import "./fonts/fonts.scss";
+body,
+html {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.fade-enter {
-  display:none;
+.fade-in {
   opacity: 0;
-  transform: translate(0, 25px);
-  z-index: 1;
+  transition: opacity 1.3s ease-in-out;
 }
 
-.fade-enter.fade-enter-active {
+.fade-in-entered {
   opacity: 1;
-  transform: translate(0, 0);
-  transition: opacity 250ms ease-out, transform 300ms ease;
-}
-
-.fade-exit {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.fade-exit.fade-exit-active {
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: opacity 250ms ease-out, transform 300ms ease;
 }
