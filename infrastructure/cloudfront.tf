@@ -1,5 +1,4 @@
 resource "aws_cloudfront_origin_access_identity" "hire_a_friend_app_origin_access" {
-  count   = var.include_aliases ? 1 : 0
   comment = "Identity for hire a friend app s3 bucket"
 }
 
