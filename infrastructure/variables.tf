@@ -62,10 +62,11 @@ variable "aliases" {
 
 variable "viewer_certificate" {
   description = "Viewer certificate configuration"
-  type        = map(string)
-  default     = var.include_custom_certificate ? {
-    "acm_certificate_arn"      = "arn:aws:acm:us-east-1:173088506843:certificate/cc15ec43-b0e9-41ed-a602-e8c703ee8676"
-    "ssl_support_method"       = "sni-only"
-    "minimum_protocol_version" = "TLSv1.2_2021"
+  type        = any
+
+  default = var.include_custom_certificate ? {
+    acm_certificate_arn      = "arn:aws:acm:us-east-1:173088506843:certificate/cc15ec43-b0e9-41ed-a602-e8c703ee8676"
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   } : null
 }
