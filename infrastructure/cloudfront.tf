@@ -1,4 +1,5 @@
 resource "aws_cloudfront_origin_access_identity" "hire_a_friend_app_origin_access" {
+  count   = var.include_aliases ? 1 : 0
   comment = "Identity for hire a friend app s3 bucket"
 }
 
@@ -16,7 +17,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       origin_access_identity = aws_cloudfront_origin_access_identity.hire_a_friend_app_origin_access.cloudfront_access_identity_path
     }
   }
-
+ count = var.include_aliases ? 1 : 0
   aliases = var.include_aliases ? var.aliases : []
 
   default_cache_behavior {

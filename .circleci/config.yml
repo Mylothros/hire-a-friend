@@ -65,8 +65,8 @@ aliases:
           echo 'export TF_VAR_include_aliases=true' >> $BASH_ENV
           echo 'export TF_VAR_include_custom_certificate=true' >> $BASH_ENV
         else
-          echo 'export TF_VAR_include_aliases=true' >> $BASH_ENV
-          echo 'export TF_VAR_include_custom_certificate=true' >> $BASH_ENV
+          echo 'export TF_VAR_include_aliases=false' >> $BASH_ENV
+          echo 'export TF_VAR_include_custom_certificate=false' >> $BASH_ENV
         fi
         source $BASH_ENV
 jobs:
