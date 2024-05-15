@@ -59,14 +59,17 @@ aliases:
     run:
       name: Set Terraform Variables
       command: |
-        if [ "$CIRCLE_BRANCH" == "master" ] || [ "$CIRCLE_BRANCH" == "staging" ]; then
-          echo 'export TF_VAR_include_aliases=true' >> $BASH_ENV
-          echo 'export TF_VAR_include_custom_certificate=true' >> $BASH_ENV
-        else
-          echo 'export TF_VAR_include_aliases=false' >> $BASH_ENV
-          echo 'export TF_VAR_include_custom_certificate=false' >> $BASH_ENV
-        fi
-        source $BASH_ENV
+        if [ "$CIRCLE_BRANCH" == "master" ]; then
+              echo 'export TF_VAR_include_aliases=true' >> $BASH_ENV
+              echo 'export TF_VAR_include_custom_certificate=true' >> $BASH_ENV
+            elif [ "$CIRCLE_BRANCH" == "staging" ]; then
+              echo 'export TF_VAR_include_aliases=false' >> $BASH_ENV
+              echo 'export TF_VAR_include_custom_certificate=false' >> $BASH_ENV
+            else
+              echo 'export TF_VAR_include_aliases=false' >> $BASH_ENV
+              echo 'export TF_VAR_include_custom_certificate=false' >> $BASH_ENV
+            fi
+            source $BASH_ENV
 
 jobs:
   build:
@@ -162,17 +165,18 @@ jobs:
       - run:
           name: Deploy to aws cloudfront
           command: |
-            if [ "$CIRCLE_BRANCH" == "master" ]; then
-              echo 'export TF_VAR_include_aliases=true' >> $BASH_ENV
-              echo 'export TF_VAR_include_custom_certificate=true' >> $BASH_ENV
-            elif [ "$CIRCLE_BRANCH" == "staging" ]; then
-              echo 'export TF_VAR_include_aliases=false' >> $BASH_ENV
-              echo 'export TF_VAR_include_custom_certificate=false' >> $BASH_ENV
+            CLOUDFRONT_DISTRIBUTION_ID=$(cat artifacts/couldfront_distribution_id.txt | sed 's/\"//g')
+            echo $CLOUDFRONT_DISTRIBUTION_ID
+            aws configure set preview.cloudfront true
+            if [ "${CIRCLE_BRANCH}" == "master" ]
+            then
+              aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths /\*
+            elif [ "${CIRCLE_BRANCH}" == "staging" ]
+            then
+              aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths /\*
             else
-              echo 'export TF_VAR_include_aliases=false' >> $BASH_ENV
-              echo 'export TF_VAR_include_custom_certificate=false' >> $BASH_ENV
+              aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths /\*
             fi
-            source $BASH_ENV
 
   # terraform-destroy:
   #   executor: terraform-executor
@@ -197,42 +201,4 @@ workflows:
           filters:
             branches:
               only:
-                - develop
-                - staging
-                - master
-      - terraform-plan-and-apply:
-          requires:
-            - terraform-validate
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
-      - deploy-to-aws-s3:
-          requires:
-            - terraform-plan-and-apply
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
-      - deploy-to-aws-cloudfront:
-          requires:
-            - deploy-to-aws-s3
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master           
-      # - terraform-destroy:
-      #     requires:
-      #       - hold
-      #     filters:
-      #       branches:
-      #         only:
-      #           - develop
-      #           - staging
-      #           - master
+                -
