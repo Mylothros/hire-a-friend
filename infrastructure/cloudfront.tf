@@ -17,6 +17,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
+  aliases = var.include_aliases ? var.aliases : []
+
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
     cached_methods         = ["GET", "HEAD"]
@@ -51,8 +53,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
-  viewer_certificate {
-    cloudfront_default_certificate = true
+  dynamic "viewer_certificate" {
+    for_each = var.include_custom_certificate ? [1] : []
+    content {
+      cloudfront_default_certificate = false
+      acm_certificate_arn            = var.viewer_certificate["acm_certificate_arn"]
+      ssl_support_method             = var.viewer_certificate["ssl_support_method"]
+      minimum_protocol_version       = var.viewer_certificate["minimum_protocol_version"]
+    }
   }
 
   tags = local.common_tags
