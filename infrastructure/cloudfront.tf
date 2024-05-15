@@ -16,8 +16,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       origin_access_identity = aws_cloudfront_origin_access_identity.hire_a_friend_app_origin_access.cloudfront_access_identity_path
     }
   }
- count = var.include_aliases ? 1 : 0
-  aliases = var.include_aliases ? var.aliases : []
 
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
@@ -53,14 +51,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
-  dynamic "viewer_certificate" {
-    for_each = var.include_custom_certificate ? [1] : []
-    content {
-      cloudfront_default_certificate = false
-      acm_certificate_arn            = var.viewer_certificate["acm_certificate_arn"]
-      ssl_support_method             = var.viewer_certificate["ssl_support_method"]
-      minimum_protocol_version       = var.viewer_certificate["minimum_protocol_version"]
-    }
+  viewer_certificate {
+    cloudfront_default_certificate = true
   }
 
   tags = local.common_tags

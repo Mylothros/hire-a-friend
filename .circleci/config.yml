@@ -54,21 +54,6 @@ aliases:
         cd out
         zip ../out.zip -r * .[^.]*
         echo "Build successful"
-  - &set-terraform-variables
-    run:
-      name: Set Terraform Variables
-      command: |
-        if [ "$CIRCLE_BRANCH" == "master" ]; then
-          echo 'export TF_VAR_include_aliases=true' >> $BASH_ENV
-          echo 'export TF_VAR_include_custom_certificate=true' >> $BASH_ENV
-        elif [ "$CIRCLE_BRANCH" == "staging" ]; then
-          echo 'export TF_VAR_include_aliases=true' >> $BASH_ENV
-          echo 'export TF_VAR_include_custom_certificate=true' >> $BASH_ENV
-        else
-          echo 'export TF_VAR_include_aliases=false' >> $BASH_ENV
-          echo 'export TF_VAR_include_custom_certificate=false' >> $BASH_ENV
-        fi
-        source $BASH_ENV
 jobs:
   build:
     executor: app-executor
@@ -106,7 +91,6 @@ jobs:
       - attach_workspace:
           at: ./
       - *show-current-branch-name
-      - *set-terraform-variables
       - run:
           name: Terraform Plan
           command: |
