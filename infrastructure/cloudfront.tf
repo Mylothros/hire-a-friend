@@ -9,6 +9,15 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   is_ipv6_enabled     = false
   default_root_object = "index.html"
 
+dynamic "viewer_certificate" {
+    for_each = var.include_custom_certificate ? [1] : []
+    content {
+      cloudfront_default_certificate = false
+      acm_certificate_arn            = var.viewer_certificate["acm_certificate_arn"]
+      ssl_support_method             = var.viewer_certificate["ssl_support_method"]
+      minimum_protocol_version       = var.viewer_certificate["minimum_protocol_version"]
+    }
+  }
   origin {
     domain_name = aws_s3_bucket.hire_a_friend_app_s3_bucket.bucket_regional_domain_name
     origin_id   = aws_s3_bucket.hire_a_friend_app_s3_bucket.id
@@ -50,16 +59,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   restrictions {
     geo_restriction {
       restriction_type = "none"
-    }
-  }
-
-  dynamic "viewer_certificate" {
-    for_each = var.include_custom_certificate ? [1] : []
-    content {
-      cloudfront_default_certificate = false
-      acm_certificate_arn            = var.viewer_certificate["acm_certificate_arn"]
-      ssl_support_method             = var.viewer_certificate["ssl_support_method"]
-      minimum_protocol_version       = var.viewer_certificate["minimum_protocol_version"]
     }
   }
 
