@@ -13,8 +13,8 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "start": "next start",
-    "build": "next build",
-    "sitemaps": "next-sitemap"
+    "prebuild": "next-sitemap",
+    "build": "next build"
   },
   "browserslist": {
     "production": [

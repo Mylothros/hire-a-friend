@@ -50,7 +50,6 @@ aliases:
           echo "NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL_DEVELOP" > .env.local
         fi
         npm install
-        npm run sitemaps
         CI=false npm run build
         cd out
         zip ../out.zip -r * .[^.]*
