@@ -52,8 +52,13 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    cloudfront_default_certificate = var.branch != "master"
+    acm_certificate_arn            = var.branch == "master" ? var.viewer_certificate.acm_certificate_arn : null
+    ssl_support_method             = var.branch == "master" ? var.viewer_certificate.ssl_support_method : null
+    minimum_protocol_version       = var.branch == "master" ? var.viewer_certificate.minimum_protocol_version : null
   }
+
+  aliases = var.branch == "master" ? var.aliases : []
 
   tags = local.common_tags
 }
