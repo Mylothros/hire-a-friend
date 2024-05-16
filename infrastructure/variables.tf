@@ -45,6 +45,7 @@ variable "custom_error_response" {
 variable "branch" {
   description = "The current branch name"
   type        = string
+  default = "dev"
 }
 
 variable "aliases" {
