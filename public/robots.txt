@@ -1,2 +1,5 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://www.hireafriend.co/sitemap-0.xml
+Sitemap: https://www.hireafriend.co/sitemap.xml
