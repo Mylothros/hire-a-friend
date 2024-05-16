@@ -98,7 +98,6 @@ jobs:
             terraform init
             terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
             terraform plan -var "branch=${CIRCLE_BRANCH}"
-            terraform plan
       - run:
           name: Terraform Apply
           command: |
