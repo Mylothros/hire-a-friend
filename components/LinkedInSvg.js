@@ -17,7 +17,7 @@ const LinkedIn = () => {
 
   return (
     <a
-      href="https://www.linkedin.com/in/hire-afriend-b5088a293/"
+      href="https://www.linkedin.com/company/hirefriend/"
       target="_blank"
       rel="noopener noreferrer"
       name="LinkedIn button"
