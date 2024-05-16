@@ -97,13 +97,13 @@ jobs:
             cd artifacts/infrastructure/
             terraform init
             terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
-            terraform plan
+            terraform plan -var "branch=${CIRCLE_BRANCH}" -out=tfplan
       - run:
           name: Terraform Apply
           command: |
             cd artifacts/infrastructure/
             terraform workspace select ${CIRCLE_BRANCH}
-            terraform apply --auto-approve
+            terraform apply --auto-approve "tfplan"
             terraform output hire_a_friend_app_bucket_name > ../hire_a_friend_bucket_name.txt
             terraform output couldfront_distribution_id > ../couldfront_distribution_id.txt
       - persist_to_workspace:

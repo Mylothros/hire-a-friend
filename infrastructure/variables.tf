@@ -41,3 +41,25 @@ variable "custom_error_response" {
     }
   ]
 }
+
+variable "branch" {
+  description = "The current branch name"
+  type        = string
+  default = "dev"
+}
+
+variable "aliases" {
+  description = "List of aliases"
+  type        = list(string)
+  default     = ["hireafriend.co", "www.hireafriend.co"]
+}
+
+variable "viewer_certificate" {
+  description = "Viewer certificate configuration"
+  type        = any
+  default = {
+    acm_certificate_arn      = "arn:aws:acm:us-east-1:173088506843:certificate/cc15ec43-b0e9-41ed-a602-e8c703ee8676"
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
+  }
+}
