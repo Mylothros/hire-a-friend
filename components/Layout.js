@@ -23,7 +23,7 @@ const Layout = ({ children, title, description, ogTitle, ogDescription }) => {
       ]
     },
     "name": "Hire a Friend - Your Source for Finding Trusted Companions",
-    "keywords": ["hire a friend", "companionship", "friendship", "activities", "social", "networking", "hireafriend", "hire a friend"]
+    "keywords": ["hire a friend", "companionship", "friendship", "activities", "social", "networking", "hireafriend", "Hire a Friend"]
   }
   return (
     <div className={`fade-in ${fadeIn ? "fade-in-entered" : ""}`}>
@@ -45,6 +45,8 @@ const Layout = ({ children, title, description, ogTitle, ogDescription }) => {
         />
         <meta property="og:url" content="http://www.hireafriend.co" />
         <meta name="twitter:card" content="https://d3pc0hdqierc2c.cloudfront.net/assets/images/grid_1_imessage.jpg" />
+        <link rel="icon" sizes="315x315" href="https://d3pc0hdqierc2c.cloudfront.net/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" sizes="315x315" href="https://d3pc0hdqierc2c.cloudfront.net/favicon.ico" type="image/x-icon" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(metadataJson) }}>
         </script>
         {/* <meta property="og:image" content="http://test-bucket-hire.s3-website-us-east-1.amazonaws.com/assets/images/grid_1_imessage.jpg" /> */}
