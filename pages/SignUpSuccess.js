@@ -34,7 +34,7 @@ const SignUpSuccess = () => {
 
   return (
     <Layout
-    crawl={false}
+      crawl={false}
       title="Signed up"
       description="You will receive a notification when the project
       starts."
