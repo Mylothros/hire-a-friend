@@ -1,4 +1,4 @@
-const CircleSvg = ({ slot }) => {
+const CircleSvg = () => {
   return (
     <svg
       width="42"
