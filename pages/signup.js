@@ -77,10 +77,13 @@ const signup = () => {
 
   return (
     <Layout
+      crawl={true}
       title="Sign Up"
-      description="Sign Up in Hire A Friend"
+      description="Begin your journey with Hire A Friend by registering and creating your account today!"
       ogTitle="Sign Up"
-      ogDescription="Sign Up in Hire A Friend"
+      ogDescription="Begin your journey with Hire A Friend by registering and creating your account today!"
+      ogUrl="http://www.hireafriend.co/signup/index.html"
+      canonical="http://www.hireafriend.co/signup/index.html"
     >
       <form onSubmit={handleSubmit}>
         <div className={styles["container"]}>

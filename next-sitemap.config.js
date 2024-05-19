@@ -1,6 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
     siteUrl: 'https://www.hireafriend.co',
-    outDir: './out'
+    outDir: './out',
+    exclude: ['/SignUpSuccess']
   }
   
