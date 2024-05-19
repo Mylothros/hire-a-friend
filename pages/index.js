@@ -69,8 +69,8 @@ const LandingPage = () => {
       description="Hire a Friend is your trusted platform to find companions for various activities, events, or simply for friendship. Browse through a diverse selection of people and make meaningful connections today."
       ogTitle="Hire a Friend: Your Source for Finding Trusted Companions"
       ogDescription="Hire a Friend is your trusted platform to find companions for various activities, events, or simply for friendship. Browse through a diverse selection of people and make meaningful connections today."
-      ogUrl="http://www.hireafriend.co"
-      canonical="http://www.hireafriend.co"
+      ogUrl="https://www.hireafriend.co"
+      canonical="https://www.hireafriend.co"
 
     >
       <div className={styles["container"]}>

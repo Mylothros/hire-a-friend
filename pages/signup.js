@@ -82,8 +82,8 @@ const signup = () => {
       description="Begin your journey with Hire A Friend by registering and creating your account today!"
       ogTitle="Sign Up"
       ogDescription="Begin your journey with Hire A Friend by registering and creating your account today!"
-      ogUrl="http://www.hireafriend.co/signup/index.html"
-      canonical="http://www.hireafriend.co/signup/index.html"
+      ogUrl="https://www.hireafriend.co/signup/index.html"
+      canonical="https://www.hireafriend.co/signup/index.html"
     >
       <form onSubmit={handleSubmit}>
         <div className={styles["container"]}>
