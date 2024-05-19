@@ -25,7 +25,10 @@ const ButtonSlot = (props) => {
       )}
       {props.slot2 && (
         <div className={`${styles["button-1"]} ${styles["centerized-button"]}`}>
-          <Link className={styles["arrow-button"]} href="/signup">
+          <Link
+            className={styles["arrow-button"]}
+            href="/signup"
+          >
             {" "}
             {props.slot2}
           </Link>
@@ -46,7 +49,11 @@ const ButtonSlot = (props) => {
       )}
       {props.slot4 && (
         <div className={styles["button-1"]}>
-          <Link className={styles["arrow-button"]} href="/" as="/index.html">
+          <Link
+            className={styles["arrow-button"]}
+            href="/"
+            as="/index.html"
+          >
             {props.slot4}
           </Link>
         </div>
