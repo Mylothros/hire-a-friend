@@ -122,7 +122,7 @@ const signup = () => {
               </span>
             </p>
             <div>
-              <Button slot3="Sign up" dataSubmited={dataSubmited} />
+              <Button slot3="Sign up" dataPassed={dataSubmited} />
             </div>
           </div>
           <div className={styles["image-area-2"]}>
