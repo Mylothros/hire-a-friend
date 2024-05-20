@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import PropTypes from 'prop-types';
 
 import styles from "styles/components/button.module.scss";
 
-const ButtonSlot = (props) => {
-  const dataPassed = props.dataSubmited;
+const ButtonSlot = ({slot1, slot2, slot3, slot4, dataPassed}) => {
   const [dataSubmited, setDataSubmited] = useState(false);
 
   useEffect(() => {
@@ -12,29 +12,29 @@ const ButtonSlot = (props) => {
   }, [dataPassed]);
   return (
     <div>
-      {props.slot1 && (
+      {slot1 && (
         <div className={styles["button-1"]}>
           <Link
             className={styles["arrow-button"]}
             href="/signup"
             as="/signup/index.html"
           >
-            {props.slot1}
+            {slot1}
           </Link>
         </div>
       )}
-      {props.slot2 && (
+      {slot2 && (
         <div className={`${styles["button-1"]} ${styles["centerized-button"]}`}>
           <Link
             className={styles["arrow-button"]}
             href="/signup"
           >
             {" "}
-            {props.slot2}
+            {slot2}
           </Link>
         </div>
       )}
-      {props.slot3 && (
+      {slot3 && (
         <div className={styles["button-1"]}>
           {dataSubmited ? (
             <>
@@ -43,18 +43,18 @@ const ButtonSlot = (props) => {
               </div>{" "}
             </>
           ) : (
-            <button className={styles["arrow-button"]}>{props.slot3}</button>
+            <button className={styles["arrow-button"]}>{slot3}</button>
           )}
         </div>
       )}
-      {props.slot4 && (
+      {slot4 && (
         <div className={styles["button-1"]}>
           <Link
             className={styles["arrow-button"]}
             href="/"
             as="/index.html"
           >
-            {props.slot4}
+            {slot4}
           </Link>
         </div>
       )}
@@ -62,3 +62,11 @@ const ButtonSlot = (props) => {
   );
 };
 export default ButtonSlot;
+
+ButtonSlot.propTypes = {
+  slot1: PropTypes.string,
+  slot2: PropTypes.string,
+  slot3: PropTypes.string,
+  slot4: PropTypes.string,
+  dataPassed: PropTypes.bool,
+};

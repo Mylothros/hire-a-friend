@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
 const Layout = ({
   children,
@@ -99,3 +100,14 @@ const Layout = ({
   );
 };
 export default Layout;
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  crawl: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  ogTitle: PropTypes.string.isRequired,
+  ogDescription: PropTypes.string.isRequired,
+  ogUrl: PropTypes.string,
+  canonical: PropTypes.string,
+};
