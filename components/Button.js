@@ -64,7 +64,7 @@ const ButtonSlot = ({slot1, slot2, slot3, slot4, dataPassed}) => {
 export default ButtonSlot;
 
 ButtonSlot.propTypes = {
-  slot1: PropTypes.bool,
+  slot1: PropTypes.string,
   slot2: PropTypes.string,
   slot3: PropTypes.string,
   slot4: PropTypes.string,
