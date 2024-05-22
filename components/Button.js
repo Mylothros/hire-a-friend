@@ -52,7 +52,7 @@ const ButtonSlot = ({slot1, slot2, slot3, slot4, dataPassed}) => {
           <Link
             className={styles["arrow-button"]}
             href="/"
-            as="/index.html"
+            as=""
           >
             {slot4}
           </Link>
