@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import styles from "styles/components/button.module.scss";
 
-const ButtonSlot = ({slot1, slot2, slot3, slot4, dataPassed}) => {
+const ButtonSlot = ({slot1, slot2, slot3, slot4, dataPassed, path}) => {
   const [dataSubmited, setDataSubmited] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const ButtonSlot = ({slot1, slot2, slot3, slot4, dataPassed}) => {
         <div className={`${styles["button-1"]} ${styles["centerized-button"]}`}>
           <Link
             className={styles["arrow-button"]}
-            href="/signup"
+            href={path}
           >
             {" "}
             {slot2}
@@ -69,4 +69,5 @@ ButtonSlot.propTypes = {
   slot3: PropTypes.string,
   slot4: PropTypes.string,
   dataPassed: PropTypes.bool,
+  path: PropTypes.string,
 };
