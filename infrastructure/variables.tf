@@ -17,27 +17,9 @@ variable "custom_error_response" {
   default = [
     {
       error_caching_min_ttl = 10
-      error_code            = 400
-      response_code         = 200
-      response_page_path    = "/index.html"
-    },
-    {
-      error_caching_min_ttl = 10
       error_code            = 403
       response_code         = 200
-      response_page_path    = "/index.html"
-    },
-    {
-      error_caching_min_ttl = 10
-      error_code            = 404
-      response_code         = 200
-      response_page_path    = "/index.html"
-    },
-    {
-      error_caching_min_ttl = 10
-      error_code            = 405
-      response_code         = 200
-      response_page_path    = "/index.html"
+      response_page_path    = "/404/index.html"
     }
   ]
 }

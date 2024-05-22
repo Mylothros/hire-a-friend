@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /SignUpSuccess
+Disallow: /404
 
 Sitemap: https://www.hireafriend.co/sitemap-0.xml
 Sitemap: https://www.hireafriend.co/sitemap.xml

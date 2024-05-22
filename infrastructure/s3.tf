@@ -34,7 +34,7 @@ resource "aws_s3_bucket_website_configuration" "hire_a_friend_app_bucket_website
   }
 
   error_document {
-    key = "index.html"
+    key = "404/index.html"
   }
 }
 

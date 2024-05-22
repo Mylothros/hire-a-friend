@@ -186,7 +186,7 @@ const LandingPage = () => {
             <Card slot2={card2Slot} />
             <Card slot3={card3Slot} />
           </div>
-          <Button slot2="Sign up" />{" "}
+          <Button slot2="Sign up" path="signup"/>{" "}
         </div>
         <div className={styles["area-4"]}>
           <div className={styles["card"]}>
