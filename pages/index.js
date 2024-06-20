@@ -65,9 +65,9 @@ const LandingPage = () => {
   return (
     <Layout
       crawl={true}
-      title="Hire a Friend: Your Source for Finding Trusted Companions"
+      title="Hire a Friend"
       description="Hire a Friend is your trusted platform to find companions for various activities, events, or simply for friendship. Browse through a diverse selection of people and make meaningful connections today."
-      ogTitle="Hire a Friend: Your Source for Finding Trusted Companions"
+      ogTitle="Hire a Friend"
       ogDescription="Hire a Friend is your trusted platform to find companions for various activities, events, or simply for friendship. Browse through a diverse selection of people and make meaningful connections today."
       ogUrl="https://www.hireafriend.co"
       canonical="https://www.hireafriend.co"
