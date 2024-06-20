@@ -78,9 +78,9 @@ const signup = () => {
   return (
     <Layout
       crawl={true}
-      title="Sign Up"
+      title="Sign Up for Hire A Friend"
       description="Begin your journey with Hire A Friend by registering and creating your account today!"
-      ogTitle="Sign Up"
+      ogTitle="Sign Up for Hire A Friend"
       ogDescription="Begin your journey with Hire A Friend by registering and creating your account today!"
       ogUrl="https://www.hireafriend.co/signup/index.html"
       canonical="https://www.hireafriend.co/signup/index.html"
